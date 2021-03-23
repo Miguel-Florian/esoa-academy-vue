@@ -1,4 +1,8 @@
 <template>
+<nav>
+    <router-link to='/'>Accueil</router-link> | 
+    <router-link to='/register'>Pas de compte? S'inscrire</router-link>
+  </nav>
   <div id="login">
        <div class="logo"><img src="../assets/esoa-academy.png" alt=""></div>
     <h1>Login</h1>
@@ -26,7 +30,7 @@
         <input type="checkbox" class="checkbox" id="checkbox" />
         <label class="form-check-label" for="checkbox">Remember me </label>
       </div>
-      <button type="submit" class="submit">Submit</button>
+      <button type="submit">Submit</button>
     </form>
     <div class="footer">
       <h4>Copyright &copy; Esoa Academy 2021 - Tous droits réservés &reg;</h4>
@@ -96,6 +100,13 @@ button{
     font-weight: bold;
     font-size:16px;
     cursor: pointer;
+    outline: none;
+    border-color:#213F6B
+}
+button:hover{
+  border-color:#e0291c;
+  background-color: #e0291c;
+  color: #FFFFFF;
 }
 .footer{
   margin-top:40%;
