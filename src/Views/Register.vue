@@ -72,6 +72,17 @@
     };
     </script>
 <style scoped>
+a{
+    font-weight: bold;
+    text-decoration: none;
+     color: #2c3e50b6;
+}
+.router-link-active{
+  font-weight: bold;
+    text-decoration: none;
+     color: #EF5A31;
+     border-bottom: 2px solid #EF5A31;
+  }
 h2 {
   font-family: Helvetica, Arial, sans-serif;
   font-weight: 600px;
