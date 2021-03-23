@@ -38,6 +38,17 @@
   </div>
 </template>
 <style scoped>
+a{
+    font-weight: bold;
+    text-decoration: none;
+     color: #2c3e50b6;
+}
+.router-link-active{
+  font-weight: bold;
+    text-decoration: none;
+     color: #EF5A31;
+     border-bottom: 2px solid #EF5A31;
+  }
 #login{
     margin-top:2%;
     border:0px solid black;
