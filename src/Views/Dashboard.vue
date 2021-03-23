@@ -1,6 +1,6 @@
 <template>
 <div class="dashboard">
-    <div class="dash">
+    <div id="dash">
         <nav id="menu-bar">
             <ul>
                 <li class="logo-fav"><router-link to='/' id="homelink">Esoa Academie</router-link></li>
@@ -16,6 +16,7 @@
                     <nav id="item">
                         <ul>
                             <li v-for="item in items" :key="item.id" class="liste"><router-link to='/'>{{item}}</router-link></li>
+                        
                         </ul>
                     </nav>
                 </div>
@@ -38,7 +39,7 @@
         }
         },
     };
-    </script>
+</script>
     <style scoped>
     #homelink{
     font-weight: bold;
