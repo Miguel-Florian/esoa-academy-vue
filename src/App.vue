@@ -1,8 +1,4 @@
 <template>
-  <nav>
-    <router-link to='/'>Accueil</router-link> | 
-    <router-link to='/register'>Pas de compte? S'inscrire</router-link>
-  </nav>
   <router-view> </router-view>
 </template>
 
