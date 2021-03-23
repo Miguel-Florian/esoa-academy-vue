@@ -16,12 +16,6 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
-}
-a{
-    font-weight: bold;
-    text-decoration: none;
-     color: #2c3e50b6;
 }
 .router-link-active{
   font-weight: bold;
