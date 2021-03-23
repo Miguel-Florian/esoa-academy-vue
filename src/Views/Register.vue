@@ -1,4 +1,8 @@
 <template>
+<nav>
+    <router-link to='/'>Accueil</router-link> | 
+    <router-link to='/register'>Pas de compte? S'inscrire</router-link>
+  </nav>
  <div class="sign">
     <img src="../assets/esoa-academy.png" id="logo" />
 
@@ -57,7 +61,9 @@
         </div>
       </form>
     </div>
-    <Footer />
+    <div class="footer">
+      <h4>Copyright &copy; Esoa Academy 2021 - Tous droits réservés &reg;</h4>
+    </div>
   </div>
 </template>
     <script>
@@ -67,7 +73,7 @@
     </script>
 <style scoped>
 h2 {
-  font-family: Montserrat;
+  font-family: Helvetica, Arial, sans-serif;
   font-weight: 600px;
   color: #233e6a;
   margin-left: 10.8em;
@@ -142,6 +148,15 @@ button:hover {
   margin-top: 28em;
   position: absolute;
   margin-left: 34%;
+}
+.footer{
+  margin-left:30%;
+  margin-right:30%;
+  margin-top:38%;
+  position: relative;
+}
+h4{
+  text-decoration: underline;
 }
 </style>
         
