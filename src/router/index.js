@@ -2,7 +2,7 @@ import {createRouter,createWebHistory} from 'vue-router';
 import Home from '@/Views/Home.vue';
 import Register from '@/Views/Register.vue';
 import Dashboard from "@/Views/Dashboard.vue";
-import Add from "@/Views/Add.vue";
+import Overview from "@/Views/Overview.vue";
 /*import Modify from "@/Views/Modify.vue";
 import Show from "@/Views/Show.vue";
 import Delete from "@/Views/Delete.vue";
@@ -26,12 +26,39 @@ const routes = [
     name: Dashboard,
     path: "/dashboard",
     component: Dashboard,
+    children: [
+      {
+        path: "/overview",
+        component: () =>
+          import(/*webpackChunckName:"overview"*/ "../Views/Overview"),
+      },
+      {
+        path: "/accueil",
+        component: () =>
+          import(/*webpackChunckName:"overview"*/ "../Views/Accueil"),
+      },
+      {
+        path: "/messages",
+        component: () =>
+          import(/*webpackChunckName:"overview"*/ "../Views/Messages"),
+      },
+      {
+        path: "/profil",
+        component: () =>
+          import(/*webpackChunckName:"overview"*/ "../Views/Profil"),
+      },
+      {
+        path: "/connexion",
+        component: () =>
+          import(/*webpackChunckName:"overview"*/ "../Views/Connexion"),
+      }
+    ],
   },
   {
-    name: Add,
-    path: "/add",
-    component: Add,
-  },/*
+    name: Overview,
+    path: "/overview",
+    component: Overview,
+  } /*
   {
     name: Modify,
     path: "/modify",
@@ -61,7 +88,7 @@ const routes = [
     name: Email,
     path: "/emailTo",
     component: Email,
-  }*/
+  }*/,
 ];
 
 const router = createRouter({
