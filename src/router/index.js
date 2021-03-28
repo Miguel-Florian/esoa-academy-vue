@@ -28,30 +28,45 @@ const routes = [
     component: Dashboard,
     children: [
       {
-        path: "/overview",
+        path: "/dashboard/overview",
         component: () =>
           import(/*webpackChunckName:"overview"*/ "../Views/Overview"),
       },
       {
-        path: "/accueil",
+        path: "/dashboard/accueil",
         component: () =>
           import(/*webpackChunckName:"overview"*/ "../Views/Accueil"),
       },
       {
-        path: "/messages",
+        path: "/dashboard/messages",
         component: () =>
           import(/*webpackChunckName:"overview"*/ "../Views/Messages"),
       },
       {
-        path: "/profil",
+        path: "/dashboard/profil",
         component: () =>
           import(/*webpackChunckName:"overview"*/ "../Views/Profil"),
       },
       {
-        path: "/connexion",
+        path: "/dashboard/connexion",
         component: () =>
           import(/*webpackChunckName:"overview"*/ "../Views/Connexion"),
-      }
+      },
+      {
+        path: "/dashboard/finances",
+        component: () =>
+          import(/*webpackChunckName:"overview"*/ "../Views/Finance"),
+      },
+      {
+        path: "/dashboard/rencontres",
+        component: () =>
+          import(/*webpackChunckName:"overview"*/ "../Views/Rencontres"),
+      },
+      {
+        path: "/dashboard/mail",
+        component: () =>
+          import(/*webpackChunckName:"overview"*/ "../Views/Mail"),
+      },
     ],
   },
   {
