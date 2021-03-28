@@ -1,17 +1,17 @@
 <template>
     <div class="overview">
-        <p>Accueil</p>
+        <p>Ajouter</p>
    </div>
 </template>
 <script>
 export default {
-    name:"Acceuil"
+    name:"Ajout"
     
 }
 </script>
 
 <style scoped>
-   .overview{
+    .overview{
         display: flex;
         justify-content: center;
         align-items: center;

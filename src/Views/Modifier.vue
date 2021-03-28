@@ -1,17 +1,17 @@
 <template>
     <div class="overview">
-        <p>Overview</p>
+        <p>Modifier</p>
    </div>
 </template>
 <script>
 export default {
-    name:"Overview"
+    name:"Modifier"
     
 }
 </script>
 
 <style scoped>
-    .overview{
+   .overview{
         display: flex;
         justify-content: center;
         align-items: center;
