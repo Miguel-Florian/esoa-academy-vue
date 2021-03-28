@@ -2,7 +2,6 @@ import {createRouter,createWebHistory} from 'vue-router';
 import Home from '@/Views/Home.vue';
 import Register from '@/Views/Register.vue';
 import Dashboard from "@/Views/Dashboard.vue";
-import Overview from "@/Views/Overview.vue";
 /*import Modify from "@/Views/Modify.vue";
 import Show from "@/Views/Show.vue";
 import Delete from "@/Views/Delete.vue";
@@ -28,19 +27,19 @@ const routes = [
     component: Dashboard,
     children: [
       {
-        path: "/dashboard/overview",
+        path: "/dashboard/ajout",
         component: () =>
-          import(/*webpackChunckName:"overview"*/ "../Views/Overview"),
+          import(/*webpackChunckName:"overview"*/ "../Views/Ajout"),
       },
       {
-        path: "/dashboard/accueil",
+        path: "/dashboard/modifier",
         component: () =>
-          import(/*webpackChunckName:"overview"*/ "../Views/Accueil"),
+          import(/*webpackChunckName:"overview"*/ "../Views/Modifier"),
       },
       {
-        path: "/dashboard/messages",
+        path: "/dashboard/supprimer",
         component: () =>
-          import(/*webpackChunckName:"overview"*/ "../Views/Messages"),
+          import(/*webpackChunckName:"overview"*/ "../Views/Supprimer"),
       },
       {
         path: "/dashboard/profil",
@@ -68,12 +67,8 @@ const routes = [
           import(/*webpackChunckName:"overview"*/ "../Views/Mail"),
       },
     ],
-  },
-  {
-    name: Overview,
-    path: "/overview",
-    component: Overview,
-  } /*
+  }
+  /*
   {
     name: Modify,
     path: "/modify",
