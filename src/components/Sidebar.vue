@@ -44,7 +44,7 @@
 .menu-items{
     display:flex;
     flex-direction:column;
-    margin-top:1%;
+    margin-top:6%;
 }
 .menu-items>*{
     margin-top:16%;
@@ -79,7 +79,7 @@
     margin-left:10px;
 }
 .side-btn{
-    font-size:18px;
+    font-size:16px;
     border:none;
     padding:10px 0px;
     cursor: pointer;
