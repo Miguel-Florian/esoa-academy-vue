@@ -2,13 +2,13 @@
     <div class="sidebar">
         <div class="title">Dashboard</div>
         <div class="menu-items">
-            <router-link to="/dashboard/overview" active-class="active" exact tag="button" class="side-btn">
+            <router-link to="/dashboard/ajout" active-class="active" exact tag="button" class="side-btn">
                 <div class="link-container">Ajouter un académicien</div>                    
             </router-link>
-            <router-link to="/dashboard/accueil" active-class="active" exact tag="button" class="side-btn">
+            <router-link to="/dashboard/modifier" active-class="active" exact tag="button" class="side-btn">
                 <div class="link-container">Modifier un académicien</div>                    
             </router-link>
-            <router-link to="/dashboard/messages" active-class="active" exact tag="button" class="side-btn">
+            <router-link to="/dashboard/supprimer" active-class="active" exact tag="button" class="side-btn">
                 <div class="link-container">Supprimer un académicien</div>                    
             </router-link>
             <router-link to="/dashboard/rencontres" active-class="active" exact tag="button" class="side-btn">
