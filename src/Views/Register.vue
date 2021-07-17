@@ -41,6 +41,9 @@
       </div>
     </div>
   </div>
+  <div class="footer">
+      <h4>Copyright &copy; Esoa Academy 2021 - Tous droits réservés &reg;</h4>
+  </div>
  
 </template>
     <script>
