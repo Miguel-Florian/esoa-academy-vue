@@ -2,9 +2,11 @@
   <nav>
       <router-link to='/'>Accueil</router-link> | 
       <router-link to='/register'>Pas de compte? S'inscrire</router-link>
+      <div class="logo"><img src="../assets/esoa-academy.png" alt=""></div>
   </nav>
-  <div class="logo"><img src="../assets/esoa-academy.png" alt=""></div>
+  
   <div class="container">
+    
     <div class="column-left">
 
       <div class="first-row">
@@ -165,6 +167,507 @@ input[type="button"]{
   font-size:18px;
   font-weight: bold;
   background: linear-gradient(170deg, #b070ff 20%,#8ad2ff 69%);
+}
+/*----------Responsive for max-width: 320px ------------*/
+@media screen and (max-width: 320px){
+  nav{
+    margin: 1.2em auto;
+    width:100%;
+  }
+  a{
+      font-weight: bold;
+      text-decoration: none;
+      color: #2c3e50b6;
+      font-size: 18px;
+  }
+  .router-link-active{
+    font-weight: bold;
+    text-decoration: none;
+    color: #EF5A31;
+    border-bottom: 2px solid #EF5A31;
+  }
+  .logo{
+    width: 30vw;
+    height: 20vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-content: center;
+  }
+  .container{
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+    background-image: url(../assets/tdf2.jpg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    border-radius: 20px;
+    padding: 2em;
+    height: 100%;
+    padding: 1em;
+  }
+  .column-left{
+  border-right:none;
+  border-width: none;
+  width:95%;
+  height:46vh;
+  padding: none;
+  margin-top: -2em;
+}
+  .first-row{
+    display: flex;
+    flex-direction: column;
+    gap: 0.2em;
+  }
+  .input-title-group{
+    margin-bottom: 0.4em;
+  }
+  .input-title-group .input-title{
+  display: flex;
+  flex-flow: row;
+  color: #2c3e50b6;
+  font-size: 12px;
+}
+  .input-title-group .input-title{
+  display: flex;
+  flex-flow: row;
+  margin-bottom: 1em;
+  color: #fff;
+  font-size: 14px;
+  font-weight: bold;
+  }
+  input[type="text"],input[type="password"]{
+    width: 95%;
+    height: 2em;
+    padding-left:1em;
+    outline: none;
+    border-color:#0062ff;
+    border-radius:10px;
+}
+  .head-column-right{
+    color:#EF5A31;
+    font-weight: bold;
+  }
+  .left-bar{
+    width: 2em;
+    float: left;
+  }
+  .right-bar{
+  width: 2em;
+  float: right;
+  }
+  input[type="button"]{
+    width: 95%;
+    height: 2em;
+    cursor: pointer;
+    outline: none;
+    border: 0px solid black;
+    border-radius: 12px;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    background: linear-gradient(170deg, #b070ff 20%,#8ad2ff 69%);
+  }
+}
+
+/*----------Responsive for max-width 320px-375px ------------*/
+@media screen and (max-width: 375px) and (min-width: 321px){
+  nav{
+    margin: 1.2em auto;
+    width:100%;
+  }
+  a{
+      font-weight: bold;
+      text-decoration: none;
+      color: #2c3e50b6;
+      font-size: 18px;
+  }
+  .router-link-active{
+    font-weight: bold;
+    text-decoration: none;
+    color: #EF5A31;
+    border-bottom: 2px solid #EF5A31;
+  }
+  .logo{
+    width: 30vw;
+    height: 20vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-content: center;
+  }
+  .container{
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+    background-image: url(../assets/tdf6.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 20px;
+    padding: 2em;
+    height: 100%;
+    padding: 1em;
+  }
+  .column-left{
+  border-right:none;
+  border-width: none;
+  width:95%;
+  height:46vh;
+  padding: none;
+  margin-top: -2em;
+}
+  .first-row{
+    display: flex;
+    flex-direction: column;
+    gap: 0.2em;
+  }
+  .input-title-group{
+    margin-bottom: 0.4em;
+  }
+  .input-title-group .input-title{
+  display: flex;
+  flex-flow: row;
+  color: #2c3e50b6;
+  font-size: 12px;
+}
+  .input-title-group .input-title{
+  display: flex;
+  flex-flow: row;
+  margin-bottom: 1em;
+  color: #fff;
+  font-size: 14px;
+  font-weight: bold;
+  }
+  input[type="text"],input[type="password"]{
+    width: 95%;
+    height: 2em;
+    padding-left:1em;
+    outline: none;
+    border-color:#0062ff;
+    border-radius:10px;
+}
+  .head-column-right{
+    color:#EF5A31;
+    font-weight: bold;
+  }
+  .left-bar{
+    width: 4em;
+    float: left;
+  }
+  .right-bar{
+  width: 4em;
+  float: right;
+  }
+  input[type="button"]{
+    width: 95%;
+    height: 2em;
+    cursor: pointer;
+    outline: none;
+    border: 0px solid black;
+    border-radius: 12px;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    background: linear-gradient(170deg, #b070ff 20%,#8ad2ff 69%);
+  }
+}
+/*----------Responsive for max-width 375px-425px ------------*/
+@media screen and (max-width: 425px) and (min-width: 376px){
+  nav{
+    margin: 1.2em auto;
+    width:100%;
+  }
+  a{
+      font-weight: bold;
+      text-decoration: none;
+      color: #2c3e50b6;
+      font-size: 18px;
+  }
+  .router-link-active{
+    font-weight: bold;
+    text-decoration: none;
+    color: #EF5A31;
+    border-bottom: 2px solid #EF5A31;
+  }
+  .logo{
+    width: 30vw;
+    height: 20vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-content: center;
+  }
+  .container{
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+    background-image: url(../assets/tdf5.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 20px;
+    padding: 2em;
+    height: 100%;
+    padding: 1em;
+  }
+  .column-left{
+  border-right:none;
+  border-width: none;
+  width:95%;
+  height:46vh;
+  padding: none;
+  margin-top: -2em;
+}
+  .first-row{
+    display: flex;
+    flex-direction: column;
+    gap: 0.2em;
+  }
+  .input-title-group{
+    margin-bottom: 0.4em;
+  }
+  .input-title-group .input-title{
+  display: flex;
+  flex-flow: row;
+  color: #2c3e50b6;
+  font-size: 12px;
+}
+  .input-title-group .input-title{
+  display: flex;
+  flex-flow: row;
+  margin-bottom: 1em;
+  color: #fff;
+  font-size: 14px;
+  font-weight: bold;
+  }
+  input[type="text"],input[type="password"]{
+    width: 95%;
+    height: 2em;
+    padding-left:1em;
+    outline: none;
+    border-color:#0062ff;
+    border-radius:10px;
+}
+  .head-column-right{
+    color:#EF5A31;
+    font-weight: bold;
+  }
+  .left-bar{
+    width: 6em;
+    float: left;
+  }
+  .right-bar{
+  width: 6em;
+  float: right;
+  }
+  input[type="button"]{
+    width: 95%;
+    height: 2em;
+    cursor: pointer;
+    outline: none;
+    border: 0px solid black;
+    border-radius: 12px;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    background: linear-gradient(170deg, #b070ff 20%,#8ad2ff 69%);
+  }
+}
+/*----------Responsive for max-width 425px-768px ------------*/
+@media screen and (max-width: 768px) and (min-width: 426px){
+  nav{
+    margin: 1.2em auto;
+    width:100%;
+  }
+  a{
+      font-weight: bold;
+      text-decoration: none;
+      color: #2c3e50b6;
+      font-size: 18px;
+  }
+  .router-link-active{
+    font-weight: bold;
+    text-decoration: none;
+    color: #EF5A31;
+    border-bottom: 2px solid #EF5A31;
+  }
+  .logo{
+    width: 26vw;
+    height: 22vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-content: center;
+  }
+  .container{
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+    background-image: url(../assets/tdf6.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 20px;
+    padding: 2em;
+    height: 100%;
+    padding: 1em;
+  }
+  .column-left{
+  border-right:none;
+  border-width: none;
+  width:95%;
+  height:46vh;
+  padding: none;
+  margin-top: 2em;
+}
+  .first-row{
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+  }
+  .input-title-group{
+    margin-bottom: 0.4em;
+  }
+  .input-title-group .input-title{
+  display: flex;
+  flex-flow: row;
+  margin-bottom: 1em;
+  color: #fff;
+  font-size: 20px;
+  font-weight: bold;
+  }
+  input[type="text"],input[type="password"]{
+    width: 95%;
+    height:3em;
+    padding-left:1em;
+    outline: none;
+    border-color:hsl(0, 0%, 100%);
+    border-radius:10px;
+}
+  .head-column-right{
+    color:#000;
+    font-weight: bold;
+    font-size: 20px;
+  }
+  .left-bar{
+    width: 8em;
+    float: left;
+  }
+  .right-bar{
+  width: 8em;
+  float: right;
+  }
+  input[type="button"]{
+    width: 95%;
+    height: 2em;
+    cursor: pointer;
+    outline: none;
+    border: 0px solid black;
+    border-radius: 12px;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    background: linear-gradient(170deg, #b070ff 20%,#8ad2ff 69%);
+  }
+}
+/*----------Responsive for max-width 769px-1024px ------------*/
+@media screen and (max-width: 1024px) and (min-width: 769px){
+  nav{
+    margin: 1.2em auto;
+    width:100%;
+  }
+  a{
+      font-weight: bold;
+      text-decoration: none;
+      color: #2c3e50b6;
+      font-size: 18px;
+  }
+  .router-link-active{
+    font-weight: bold;
+    text-decoration: none;
+    color: #EF5A31;
+    border-bottom: 2px solid #EF5A31;
+  }
+  .logo{
+    width: 30vw;
+    height: 20vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-content: center;
+  }
+  .container{
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+    background-image: url(../assets/tdf6.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 20px;
+    padding: 2em;
+    height: 100%;
+    padding: 1em;
+  }
+  .column-left{
+  border-right:none;
+  border-width: none;
+  width:95%;
+  height:46vh;
+  padding: none;
+  margin-top: -2em;
+  margin-bottom: 5em;
+}
+  .first-row{
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+  }
+  .input-title-group .input-title{
+  display: flex;
+  flex-flow: row;
+  color: #2c3e50b6;
+  font-size: 12px;
+}
+  .input-title-group .input-title{
+  display: flex;
+  flex-flow: row;
+  color: #fff;
+  font-size: 22px;
+  font-weight: bold;
+  }
+  input[type="text"],input[type="password"]{
+    width: 95%;
+    height: 4em;
+    padding-left:1em;
+    outline: none;
+    border-color:#0062ff;
+    border-radius:10px;
+}
+  .head-column-right{
+    color:#000;
+    font-weight: bold;
+    font-size: 22px;
+  }
+  .left-bar{
+    width: 16em;
+    float: left;
+    margin-left: -12px;
+  }
+  .right-bar{
+  width: 16em;
+  float: right;
+  margin-right: -12px;
+  }
+  input[type="button"]{
+    width: 95%;
+    height: 4em;
+    cursor: pointer;
+    outline: none;
+    border: 0px solid black;
+    border-radius: 12px;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    background: linear-gradient(170deg, #b070ff 20%,#8ad2ff 69%);
+  }
 }
 </style>
         
