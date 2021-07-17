@@ -1,173 +1,168 @@
 <template>
-<nav>
-    <router-link to='/'>Accueil</router-link> | 
-    <router-link to='/register'>Pas de compte? S'inscrire</router-link>
+  <nav>
+      <router-link to='/'>Accueil</router-link> | 
+      <router-link to='/register'>Pas de compte? S'inscrire</router-link>
   </nav>
- <div class="sign">
-    <img src="../assets/esoa-academy.png" id="logo" />
+  <div class="logo"><img src="../assets/esoa-academy.png" alt=""></div>
+  <div class="container">
+    <div class="column-left">
 
-    <div class="form">
-      <div class="titre">
-        <h1>Sign Up</h1>
+      <div class="first-row">
+        <div class="input-title-group offset">
+          <div class="input-title white ">Nom :</div>
+          <input type="text" class="name" id="name" placeholder="Enter your name"/>
+        </div>
+        <div class="input-title-group offset">
+          <div class="input-title">Prenom :</div>
+          <input type="text" class="surname" id="surname" placeholder="Enter your surname"/>
+        </div>
       </div>
 
-      <form action="" method="POST">
-        <div class="row1">
-          <div class="col1">
-            <div class="input">
-              <input
-                type="text"
-                name="nom"
-                id="nom"
-                placeholder="Entrer votre nom"
-              />
-            </div>
-          </div>
-          <div class="col2">
-            <input
-              type="email"
-              name="email"
-              id="email"
-              placeholder="Entrer votre email"
-            />
-          </div>
+      <div class="first-row">
+        <div class="input-title-group">
+          <div class="input-title white">Mot de passe :</div>
+          <input type="password" class="password" id="password" placeholder="Enter your password"/>
         </div>
-        <div class="row2">
-          <div class="col3">
-            <div class="input">
-              <input
-                type="password"
-                name="password"
-                id="password"
-                placeholder="Enter votre mot de passe"
-              />
-            </div>
-            <div class="col4">
-              <div class="input">
-                <input
-                  type="password"
-                  name="confirm"
-                  id="confirm"
-                  placeholder="Confirmer votre mot de passe"
-                />
-              </div>
-            </div>
-          </div>
+        <div class="input-title-group">
+          <div class="input-title">Confirmer le mot de passe :</div>
+          <input type="password" class="password" id="password" placeholder="Confirm your password"/>
         </div>
-        <div class="row3">
-          <div class="valider">
-            <button type="submit">Valider</button>
-          </div>
-        </div>
-      </form>
+      </div>
+
     </div>
-    <div class="footer">
-      <h4>Copyright &copy; Esoa Academy 2021 - Tous droits réservés &reg;</h4>
+    <div class="column-right">
+      <div class="head-column-right">
+        <hr class="left-bar"> Ou s'inscrire avec <hr class="right-bar">
+      </div>
+      <div class="input-google-sign-in">
+        <input type="button" value="Google" id="gradient">
+      </div>
     </div>
   </div>
+ 
 </template>
     <script>
     export default {
     name: "Register"
     };
     </script>
+    
 <style scoped>
+nav{
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
 a{
     font-weight: bold;
     text-decoration: none;
-     color: #2c3e50b6;
+    color: #2c3e50b6;
 }
 .router-link-active{
   font-weight: bold;
-    text-decoration: none;
-     color: #EF5A31;
-     border-bottom: 2px solid #EF5A31;
+  text-decoration: none;
+  color: #EF5A31;
+  border-bottom: 2px solid #EF5A31;
+}
+.logo{
+    width: 12vw;
+    height: 22vh;
+    margin: 2em auto;
+    margin-bottom: 2em;
   }
-h2 {
-  font-family: Helvetica, Arial, sans-serif;
-  font-weight: 600px;
-  color: #233e6a;
-  margin-left: 10.8em;
-  position: absolute;
+  .logo img{
+    width: 100%;
+    height: 100%;
 }
-#logo{
-    margin-top:2em;
+.container{
+  display: grid;
+  grid-template-columns: repeat(2,4fr);
+  gap: 1em;
+  background-image: url(../assets/b2.jpg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  border-radius: 20px;
+  padding: 2em;
 }
-.row1,
-.row2 {
-  margin-bottom: 16px;
+.column-left{
+  border-right:2px solid #2c3e50b6;
+  border-width: 2px;
+  width:auto;
+  height:46vh;
+  padding: 1em;
 }
-.row1 {
-  float: left;
-  margin-top: 6em;
-  margin-left: 16em;
+.first-row{
+  display: grid;
+  grid-template-columns: repeat(2,4fr);
+  margin: 3em 1em 3em 1em;
+  gap:6em;
+  justify-content: center;
+  align-content:center;
 }
-.row2 {
-  float: right;
-  margin-top: 6em;
-  margin-right: 16em;
+.first-row .off{
+  margin-left:-2em;
 }
-.col2,
-.col4 {
-  margin-top: 4em;
+
+.input-title-group{
+  display: flex;
+  flex-direction: column;
 }
-input {
-  height: 50px;
-  width: 360px;
-  padding-left: 2em;
-  border-radius: 14px;
-  outline: none;
-  border-color: #233e6a;
-  background-color: #233e6a;
-  color: white;
-  border-left-color: none;
-  border-top-color: none;
-}
-::-webkit-input-placeholder,:-moz-placeholder,::-moz-placeholder,:-ms-input-placeholder /* WebKit, Blink, Edge */
- {
-  color: #a8a4a4;
-  font-size: 12.4px;
-  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans -serif;
-  font-weight: 400px;
-  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans -serif;
- }
-.row3 {
-  position: absolute;
-  margin-top: 24em;
-  margin-left: 44%;
-  margin-right: 44%;
-}
-button {
-  height: 50px;
-  width: 160px;
-  border-radius: 14px;
-  outline: none;
-  border-color: #233e6a;
-  background-color: #233e6a;
-  cursor: pointer;
-  color: #ef5a31;
+.input-title-group .input-title{
+  display: flex;
+  flex-flow: row;
+  margin-bottom: 1em;
+  color: #2c3e50b6;
   font-size: 18px;
+}
+.first-row .input-title-group .white{
+  color:white;
+}
+input[type="text"],input[type="password"]{
+    width: 95%;
+    height: 2em;
+    padding-left:1em;
+    outline: none;
+    border-color:#0062ff;
+    border-radius:10px;
+}
+input[type="text"]:hover,input[type="password"]:hover{
+ border-color:#0062ff;
+ transition:0.2s;
+ outline-width: 6px;
+}
+.column-right{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width:auto;
+  height:40vh;
+}
+.head-column-right{
+  margin-top: 4em;
+  display: flex;
+  flex-direction: row;
+}
+.left-bar{
+  width: 14em;
+  float: left;
+}
+.right-bar{
+  width: 14em;
+  float: right;
+}
+.input-google-sign-in{
+  margin-top: 2em;
+}
+input[type="button"]{
+  width: 95%;
+  height: 3em;
+  cursor: pointer;
+  outline: none;
+  border: 0px solid black;
+  border-radius: 12px;
+  color:white;
+  font-size:18px;
   font-weight: bold;
-}
-button:hover {
-  background-color: #ef5a31;
-  color: #ffffff;
-  border-color: #ef5a31;
-  transition: 0.2s;
-}
-.footer {
-  margin-top: 28em;
-  position: absolute;
-  margin-left: 34%;
-}
-.footer{
-  margin-left:30%;
-  margin-right:30%;
-  margin-top:38%;
-  position: relative;
-}
-h4{
-  text-decoration: underline;
+  background: linear-gradient(170deg, #b070ff 20%,#8ad2ff 69%);
 }
 </style>
         
