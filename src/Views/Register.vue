@@ -112,13 +112,15 @@ a{
   margin-bottom: 1em;
   color: #2c3e50b6;
   font-size: 18px;
+  font-weight: bold;
 }
 .first-row .input-title-group .white{
   color:white;
+  font-weight: bold;
 }
 input[type="text"],input[type="password"]{
     width: 95%;
-    height: 2em;
+    height: 3em;
     padding-left:1em;
     outline: none;
     border-color:#0062ff;
