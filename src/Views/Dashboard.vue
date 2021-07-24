@@ -106,13 +106,15 @@
     methods: {
         toggleMenu: function(){
             let toggle=document.querySelector('.toggle');
-            let nav=document.querySelector('.nav');
+            let nav=document.querySelector('.navigation');
             let main=document.querySelector('.main');
             toggle.classList.toggle('active');
             nav.classList.toggle('active');
-            main.classList.toggle('active');}
+            main.classList.toggle('active');
+            }
         },
-    }
+
+}
 </script>
 
 
@@ -142,6 +144,9 @@ body #app {
     background: #001d49;
     transition: 1s;
     overflow: hidden;
+}
+.navigation.active{
+    margin-top:-4em;
 }
 .navigation ul li .user {
     display: flex;
@@ -232,7 +237,7 @@ body #app {
     transition: 0.5s;
 }
 .main.active{
-    width:calc(100% - 60px);
+    width:calc(101% - 60px);
     left:60px;
 }
 .main .topbar{
