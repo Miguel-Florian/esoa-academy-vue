@@ -1,30 +1,63 @@
 <template>
-    <div class="sidebar">
-        <div class="title">Dashboard</div>
-        <div class="menu-items">
-            <router-link to="/dashboard/ajout" active-class="active" exact tag="button" class="side-btn">
-                <div class="link-container">Ajouter un académicien</div>                    
-            </router-link>
-            <router-link to="/dashboard/modifier" active-class="active" exact tag="button" class="side-btn">
-                <div class="link-container">Modifier un académicien</div>                    
-            </router-link>
-            <router-link to="/dashboard/supprimer" active-class="active" exact tag="button" class="side-btn">
-                <div class="link-container">Supprimer un académicien</div>                    
-            </router-link>
-            <router-link to="/dashboard/rencontres" active-class="active" exact tag="button" class="side-btn">
-                <div class="link-container">Consulter les rencontres</div>                    
-            </router-link><router-link to="/dashboard/finances" active-class="active" exact tag="button" class="side-btn">
-                <div class="link-container">Consulter les finances</div>                    
-            </router-link>
-            <router-link to="/dashboard/profil" active-class="active" exact tag="button" class="side-btn">
-                <div class="link-container">Afficher profil</div>                    
-            </router-link>
-            <router-link to="/dashboard/mail" active-class="active" exact tag="button" class="side-btn">
-                <div class="link-container">Envoie d'email</div>                    
-            </router-link>
-            
+            <div class="navigation">
+            <ul>
+                <li>
+                    <div class="user">
+                        <img class="img" src="../assets/tdf4.jpg" width="20px" height="20px">
+                        <div class="username">Mathieu Lelouche</div>
+                    </div>
+                </li>
+                <li>
+                    <router-link to="/dashboard" active-class="active" exact tag="button">
+                        <span class="icon"><i class="las la-futbol"></i></span>
+                        <span class="title">Dashboard</span>
+                    </router-link>
+                </li>
+                <li>
+                    <router-link to="/profil">
+                        <span class="icon"><i class="las la-id-card-alt"></i></span>
+                        <span class="title">Profil joueur</span>
+                    </router-link>
+                </li>
+                <li>
+                    <router-link to="/rencontres">
+                        <span class="icon"><i class="las la-calendar"></i></span>
+                        <span class="title">Carnet de rencontres</span>
+                    </router-link>
+                </li>
+                <li>
+                  <router-link to="/message">
+                        <span class="icon"><i class="las la-envelope"></i></span>
+                        <span class="title">Messages</span>
+                    </router-link>
+                </li>
+                <li>
+                    <router-link to="/recrues">
+                        <span class="icon"><i class="las la-user-cog"></i></span>
+                        <span class="title">Gestion de recrues</span>
+                    </router-link>
+                </li>
+                <li>
+                    <router-link to="/compétitions">
+                        <span class="icon"><i class="las la-medal"></i></span>
+                        <span class="title">Carnet de compétitions</span>
+                    </router-link>
+                </li>
+                <li>
+                    <router-link to="/finance">
+                        <span class="icon"><i class="las la-wallet"></i></span>
+                        <span class="title">Gestion de finances</span>
+                    </router-link>
+                </li>
+                <li>
+                    <router-link to="/setting">
+                        <span class="icon"><i class="las la-cogs"></i></span>
+                        <span class="title">Setting</span>                   
+                    </router-link>
+                </li>
+                
+            </ul>
         </div>
-    </div>
 </template>
 
 <script>
@@ -34,81 +67,4 @@
 </script>
 
 <style scoped>
-.title{
-    color:rgb(143, 136, 136);
-    font-size:24px;
-    margin-top:10%;
-    font-weight: bold;
-    font-family: Helvetica;
-}
-.menu-items{
-    display:flex;
-    flex-direction:column;
-    margin-top:6%;
-}
-.menu-items>*{
-    margin-top:16%;
-}
-.side-btn:focus{
-    outline:none;
-}
-.side-btn.active::before{
-    position:absolute;
-    content:"";
-    top:-18px;
-    right: 0;
-    height: 18px;
-    width: 18px;
-    background-color: white;
-}
-.side-btn.active::after{
-    position:absolute;
-    content:"";
-    bottom:-18px;
-    right: 0;
-    height: 18px;
-    width: 18px;
-    background-color: white;
-}
-.side-btn.active{
-    position: relative;
-    background-color: #fff;
-    color:#e0291c;
-    font-weight: bold;
-    border-radius:30px 0 0 30px;
-    margin-left:10px;
-}
-.side-btn{
-    font-size:16px;
-    border:none;
-    padding:10px 0px;
-    cursor: pointer;
-    color:white;
-    text-decoration: none;
-    width: auto;
-    height: auto;
-    background-color: transparent;
-}
-.side-btn.active .link-container::before{
-    position:absolute;
-    top:-30px;
-    right:0;
-    content:"";
-    height: 30px;
-    width: 30px;
-    border-radius: 50%;
-    background-color:#233E6A;
-}
-.side-btn.active .link-container::after{
-    position:absolute;
-    bottom:-30px;
-    right:0;
-    content:"";
-    height: 30px;
-    width: 30px;
-    border-radius: 50%;
-    background-color:#233E6A;
-    z-index:99;
-}
-
 </style>

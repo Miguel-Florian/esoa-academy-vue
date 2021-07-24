@@ -27,19 +27,18 @@ const routes = [
     component: Dashboard,
     children: [
       {
-        path: "/dashboard/ajout",
+        path: "/dashboard/dash",
         component: () =>
-          import(/*webpackChunckName:"overview"*/ "../Views/Ajout"),
+          import(/*webpackChunckName:"overview"*/ "../Views/Dash"),
+      },{
+        path: "/dashboard/Recrue",
+        component: () =>
+          import(/*webpackChunckName:"overview"*/ "../Views/Recrue"),
       },
       {
-        path: "/dashboard/modifier",
+        path: "/dashboard/Competition",
         component: () =>
-          import(/*webpackChunckName:"overview"*/ "../Views/Modifier"),
-      },
-      {
-        path: "/dashboard/supprimer",
-        component: () =>
-          import(/*webpackChunckName:"overview"*/ "../Views/Supprimer"),
+          import(/*webpackChunckName:"overview"*/ "../Views/Competition"),
       },
       {
         path: "/dashboard/profil",
@@ -47,12 +46,12 @@ const routes = [
           import(/*webpackChunckName:"overview"*/ "../Views/Profil"),
       },
       {
-        path: "/dashboard/connexion",
+        path: "/dashboard/Setting",
         component: () =>
-          import(/*webpackChunckName:"overview"*/ "../Views/Connexion"),
+          import(/*webpackChunckName:"overview"*/ "../Views/Setting"),
       },
       {
-        path: "/dashboard/finances",
+        path: "/dashboard/finance",
         component: () =>
           import(/*webpackChunckName:"overview"*/ "../Views/Finance"),
       },

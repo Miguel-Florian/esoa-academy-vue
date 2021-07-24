@@ -1,17 +1,17 @@
 <template>
     <div class="overview">
-        <p>Supprimer</p>
+        <p>Tournois</p>
    </div>
 </template>
 <script>
 export default {
-    name:"Supprimer"
+    name:"Tournoi"
     
 }
 </script>
 
 <style scoped>
-    .overview{
+   .overview{
         display: flex;
         justify-content: center;
         align-items: center;

@@ -11,17 +11,17 @@
       <form action="">
         <div class="input-title-group">
           <div class="input-title">Nom d'utilisateur :</div>
-          <input type="text" class="username" id="username" placeholder="Enter username"/>
+          <input type="text" class="username" id="username" placeholder="Enter username" v-model="nom"/>
         </div>
 
         <div class="input-title-group">
           <div class="input-title">Mot de passe :</div>
-          <input type="password" class="password" id="password" placeholder="Enter password"/>
+          <input type="password" class="password" id="password" placeholder="Enter password" v-model="password"/>
         </div>
 
         <div class="input-check">
           <input type="checkbox" class="checkbox" id="checkbox" />
-          <label class="form-check-label" for="checkbox">Remember me </label>
+          <label class="form-check-label" for="checkbox">Remember me</label>
         </div>
 
         <button type="submit">Login</button>
@@ -34,7 +34,28 @@
   </div>
   
 </template>
+ <script>
+    export default {
+    name: "Home", 
+    data:()=>{
+      return {
+        nom:"",
+        password:""
+      }
+    }
+    }
+</script>
+
+
+
+
 <style scoped>
+.router-link-active{
+  font-weight: bold;
+    text-decoration: none;
+     color: #EF5A31;
+     border-bottom: 2px solid #EF5A31;
+  }
 nav{
   margin-top: 1em;
   margin-bottom: 1em;
@@ -138,10 +159,12 @@ button:hover{
     height: 22vh;
     margin: 0 auto;
     margin-bottom: 1em;
+    border-radius: 100%;
   }
   .logo img{
-    width: 100%;
-    height: 100%;
+    border-radius: 100%;
+    width: 10%;
+    height: 10%;
   }
   .content-form{
     width: 80%;
@@ -225,5 +248,36 @@ button:hover{
     font-size: 16px;
     color: #fff;
   }
+  .input-title-group .input-title{
+    display: flex;
+    flex-flow: row;
+    margin-bottom: 1em;
+    color: #fff;
+    font-size: 22px;
+}
+input[type="text"], input[type="password"] {
+    width: 95%;
+    height: 3em;
+    padding-left: 1em;
+    outline: none;
+    border-color: #0062ff;
+    border-radius: 10px;
+}
+.input-check .form-check-label {
+    font-size: 22px;
+    color: #fff;
+}
+button{
+    width: 100%;
+    height: 3em;
+    background-color: #213F6B;
+    border-radius: 20px;
+    color: #EF5A31;
+    font-weight: bold;
+    font-size: 16px;
+    cursor: pointer;
+    outline: none;
+    border-color: #213F6B;
+}
 }
 </style>

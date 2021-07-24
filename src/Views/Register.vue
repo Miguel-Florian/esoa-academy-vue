@@ -12,22 +12,22 @@
       <div class="first-row">
         <div class="input-title-group offset">
           <div class="input-title white ">Nom :</div>
-          <input type="text" class="name" id="name" placeholder="Enter your name"/>
+          <input type="text" class="name" id="name" placeholder="Enter your name" v-model="nom"/>
         </div>
         <div class="input-title-group offset">
           <div class="input-title">Prenom :</div>
-          <input type="text" class="surname" id="surname" placeholder="Enter your surname"/>
+          <input type="text" class="surname" id="surname" placeholder="Enter your surname" v-model="prenom"/>
         </div>
       </div>
 
       <div class="first-row">
         <div class="input-title-group">
           <div class="input-title white">Mot de passe :</div>
-          <input type="password" class="password" id="password" placeholder="Enter your password"/>
+          <input type="password" class="password" id="password" placeholder="Enter your password" v-model="pass"/>
         </div>
         <div class="input-title-group">
           <div class="input-title">Confirmer le mot de passe :</div>
-          <input type="password" class="password" id="password" placeholder="Confirm your password"/>
+          <input type="password" class="password" id="password" placeholder="Confirm your password" v-model="confirmPass"/>
         </div>
       </div>
 
@@ -48,8 +48,16 @@
 </template>
     <script>
     export default {
-    name: "Register"
-    };
+    name: "Register",
+    data:()=>{
+      return {
+        nom:"",
+        prenom:"",
+        pass:"",
+        confirmPass:""
+      }
+    }
+  }
     </script>
     
 <style scoped>
