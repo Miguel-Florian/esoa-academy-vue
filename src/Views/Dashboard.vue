@@ -76,14 +76,7 @@
     </div>
 </template>
  <script>
- /*const arrives = [
-     {id:1,nom:"Luc",prenom:"De Lafonte",age:"20",taille:"1.45",poids:45},
-     {id:1,nom:"Mathieu",prenom:"Dane",age:"18",taille:"1.50",poids:60},
-     {id:1,nom:"Alonzo",prenom:"Scheez",age:"30",taille:"1.45",poids:65},
-     {id:1,nom:"Christian",prenom:"De La Marte",age:"24",taille:"1.45",poids:44},
-     {id:1,nom:"Camille",prenom:"Oscar",age:"22",taille:"1.65",poids:49},
-     {id:1,nom:"Jules",prenom:"Cruz",age:"27",taille:"1.45",poids:45},
- ];
+ /*
  const departs =[
      {id:1,nom:"Kaï",prenom:"Stef",age:"28",taille:"1.65",poids:45},
      {id:1,nom:"Mathieu",prenom:"Solanzo",age:"22",taille:"1.50",poids:57},
