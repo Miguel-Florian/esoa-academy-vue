@@ -86,6 +86,7 @@ const recrues =[
      {numero:28,nom:"Oscar",prenom:"Mingueza",age:"25",taille:"1.70",poids:49,poste:"Milieu Défensif"},
      {numero:18,nom:"Oscar",prenom:"Mingueza",age:"25",taille:"1.70",poids:49,poste:"Milieu Offensif"},
      {numero:11,nom:"Luc",prenom:"De Lafonte",age:"20",taille:"1.45",poids:45,poste:"Gardien de but"},
+     
  ];
  const academiciens = [
      {numero:1,nom:"Luc",prenom:"De Lafonte",age:"20",taille:"1.45",poids:45,poste:"Gardien de bur"},
