@@ -4,9 +4,13 @@
    </div>
    <div class="container">
        <div class="card-container-left">
-           <div class="card-left">Informations sur le joueur</div>
+           <div class="card-left">
+               <h5>Liste des joueurs(nom,prenom,action)</h5>
+               <p v-for="data in UseData" :key="data" >{{data.numero}}</p>
+           </div>
        </div>
        <div class="card-container-right">
+           <h5>Informations sur les joueurs</h5>
            <div class="card-right-top">
                <div class="card-right-top-item">liste de card item</div>
            </div>
@@ -16,7 +20,18 @@
 </template>
 <script>
 export default {
-    name:"Profil"
+    name:"Profil",
+    data(){
+        return{
+            UseData:[]
+        }
+    },
+    mounted(){
+        for(let i=0;i<this.$route.params.data.length;i++){
+            this.UseData.push(this.$route.params.data[i])
+        }
+        return (this.UseData)
+    }
     
 }
 </script>

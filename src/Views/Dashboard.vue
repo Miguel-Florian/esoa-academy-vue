@@ -16,7 +16,7 @@
                     </router-link>
                 </li>
                 <li>
-                    <router-link to="Profil">
+                    <router-link to="Profil" @click="sharedata()" >
                         <span class="icon"><i class="las la-id-card-alt"></i></span>
                         <span class="title">Profil joueur</span>
                     </router-link>
@@ -82,20 +82,12 @@
      {id:1,nom:"Mathieu",prenom:"Solanzo",age:"22",taille:"1.50",poids:57},
      {id:1,nom:"Idriss",prenom:"Konrad",age:"20",taille:"1.45",poids:54},
      {id:1,nom:"Hunter",prenom:"Bcukingham",age:"30",taille:"1.75",poids:44},
-
  ];
  const cardTitres=["Académiciens","Recrues","Départs"];
  const icon=["las la-users","las la-user-alt-slash","las la-user-check"];*/
-    export default {
-    name: "Dashboard",
-    /*data:()=>{
-        return {
-            arrives,
-            departs,
-            cardTitres,
-            icon
-        }
-    },*/
+export default {
+    name:"Dashboard",
+
     methods: {
         toggleMenu: function(){
             let toggle=document.querySelector('.toggle');
@@ -104,7 +96,17 @@
             toggle.classList.toggle('active');
             nav.classList.toggle('active');
             main.classList.toggle('active');
-            }
+            },
+        /*sharedata(){
+            return(
+            this.$router.push({
+                name:"profil",
+                params:{
+                    data:this.academiciens
+                }
+            }))
+        },*/
+            
         },
 
 }

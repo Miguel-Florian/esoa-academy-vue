@@ -145,6 +145,9 @@ export default {
             }
             return window.scrollY > 100
         },
+        /*sharedata(){
+               return (this.$router.push({name:"Pro",params:{data:this.academiciens}}));
+            }*/
     },
     directives:{
         scroll: {
