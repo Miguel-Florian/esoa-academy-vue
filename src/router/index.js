@@ -41,9 +41,9 @@ const routes = [
           import(/*webpackChunckName:"overview"*/ "../Views/Competition"),
       },
       {
-        path: "/dashboard/profil",
+        path: "/dashboard/profil",  /**:academiciens */
         component: () =>
-          import(/*webpackChunckName:"overview"*/ "../Views/Profil"),
+          import(/*webpackChunckName:"overview"*/ "../Views/Profil"),/**,props:{academiciens:} */
       },
       {
         path: "/dashboard/Setting",
@@ -67,37 +67,6 @@ const routes = [
       },
     ],
   }
-  /*
-  {
-    name: Modify,
-    path: "/modify",
-    component: Modify,
-  },
-  {
-    name: Show,
-    path: "/show",
-    component: Show,
-  },
-  {
-    name: Delete,
-    path: "/delete",
-    component: Delete,
-  },
-  {
-    name: Rencontres,
-    path: "/rencontres",
-    component: Rencontres,
-  },
-  {
-    name: Finances,
-    path: "/finances",
-    component: Finances,
-  },
-  {
-    name: Email,
-    path: "/emailTo",
-    component: Email,
-  }*/,
 ];
 
 const router = createRouter({
