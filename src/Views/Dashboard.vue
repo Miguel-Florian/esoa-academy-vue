@@ -97,7 +97,7 @@ export default {
             nav.classList.toggle('active');
             main.classList.toggle('active');
             },
-        sharedata(){
+        /*sharedata(){
             return(
             this.$router.push({
                 name:"profil",
@@ -105,7 +105,7 @@ export default {
                     data:this.academiciens
                 }
             }))
-        },
+        },*/
             
         },
 
