@@ -15,7 +15,7 @@
                                 </tr>
                             </thead>
                             <tbody>
-                                <tr title="Click to modify" @click="action(academicien)" class="color" v-for="academicien in academiciens" :key="academicien.numero">
+                                <tr title="Click to view my attributs" @click="action(academicien)" class="color" v-for="academicien in academiciens" :key="academicien.numero">
                                     <td>{{academicien.nom}}</td>
                                     <td>{{academicien.prenom}}</td>
                                     <td>{{academicien.age}} ans</td>
@@ -35,22 +35,19 @@
                     </div>
                </div>
            </div>
-           <div class="card" v-else><h5>Selectionner un joueur afin de voir ses attributs</h5></div>
+           <div class="card-message" v-else><h5>Selectionner un joueur afin de voir ses attributs...</h5></div>
 
-           <div class="card-right-bottom">
-               <h5>Action de modification</h5>
-               <div class="card-right-info-action" v-if="(visible) && (info.length!=0)">
-
-                   <div class="card-right-info">
-                       
-                   </div>
-
-                   <div class="card-right-action">
-                       <div class="action-modify"><input type="button" value="Modify"></div>
-                       <div class="action-delete"><input type="button" value="Delete"></div>
-                   </div>
-
-               </div>
+            <div class="action" v-if="(visible) && (player.length!=0)">
+                <form action="" method="post">
+                    <div class="input-group" v-for="(value,key) in player" :key="key">
+                        <label :for="key">{{key}}:</label> <br>
+                        <input type="text" :name="key" :id="key" :value=value title="Modify me !">
+                    </div>
+                    <div class="input-group-button">
+                        <input @click="set()" type="button" value="Valider">
+                        <input @click="drop(value)" type="button" value="Supprimer">
+                    </div>
+                </form>
             </div>
        </div>
    </div>
@@ -88,11 +85,42 @@ export default {
                 this.info.Taille =m.taille;
                 this.info.Poids = m.poids;                
                 this.visible=true;
-                
+                this.player.Nom = m.nom;
+                this.player.Prenom = m.prenom;
+                this.player.Age = m.age;
+                this.player.Dossart = m.dossart;
+                this.player.Poste = m.poste;
+                this.player.Taille = m.taille;
+                this.player.Poids = m.poids;
+        },
+        set(){
+            var Dossart = parseInt(document.getElementById("Dossart").value);
+            var Nom = document.getElementById("Nom").value;
+            var Prenom = document.getElementById("Prenom").value;
+            var Age = parseInt(document.getElementById("Age").value);
+            var Taille = parseFloat(document.getElementById("Taille").value);
+            var Poids = parseFloat(document.getElementById("Poids").value);
+            var Poste = document.getElementById("Poste").value;
+            let value=[Dossart,Nom,Prenom,Age,Taille,Poids,Poste];
+
+                if(this.player[1]===value[0]){
+                    alert("Ce dossart appartient dejà à un joueur !");   
+                }
+                    
+                this.player.Dossart = this.info.Dossart= value[0];
+                this.player.Nom = value[1];     //reste a modifier dans le data.json
+                this.player.Prenom = value[2];  //reste a modifier dans le data.json
+                this.player.Age= value[3];      //reste a modifier dans le data.json
+                this.player.Taille = this.info.Taille= value[4];
+                this.player.Poids = this.info.Poids = value[5];
+                this.player.Poste = this.info.Poste = value[6];
+        },
+        drop(a){
+            console.log(a)
         }
     },
     /*mounted(){
-        for(let i=0;i<this.$route.params.data.length;i++){
+        for(var i=0;i<this.$route.params.data.length;i++){
             this.UseData.push(this.$route.params.data[i])
         }
         return (this.UseData)
@@ -152,12 +180,14 @@ export default {
     }
     table tbody tr{
         cursor: pointer;
+        align-items: flex-start;
     }
     table tr td{
         padding:.8em;
         
     }
     .card-container-right{
+        overflow-y:scroll;
         display: flex;
         flex-direction: column;
         gap: 1em;
@@ -197,10 +227,123 @@ export default {
         margin-block-start: 0.5em;
         margin-block-end: 0.5em;
     }
-    .card-container-right .card-right-bottom{
+    .card-container-right .card-message{
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-content: center;
+        font-size: 20px;
+    }
+    .action{
+        margin-top: 1em;
+    }
+    .action form{
+        display: flex;
+        flex-direction: column;
+        gap:2em;
+        align-content: center;
+        justify-content: center;
+        width: 40%;
+        margin: 0 auto;
+        padding:1em;
+    }
+    .action form .input-group{
+        display: flex;
+        flex-direction: column;
+        align-content: center;
+        justify-content: center;
+        align-items: baseline;
+    }
+    .action form .input-group label{
+        font-weight: bold;
+        display: flex;
+        flex-direction: row;
+        align-content: center;
+        justify-content: center;
+        align-items: baseline;
+        align-items: flex-start;
+    }
+    .action form .input-group input[type="text"]{
+        width: auto;
+        height: 1.4em;
+        outline: none;
+        border:1px solid ;
+        border-color: #FF8B00;
+        font-size: 14px;
+        font-weight: bold;
+        border-radius: 12px;
+        padding-left: 3em;
+    }
+    .action form .input-group-button{
+        display: flex;
+        flex-direction: row;
+        align-content: center;
+        justify-content: center;
+        gap:2em;
+    }
+    .action form .input-group-button input[type="button"]{
+        width: 7em;
+        height: 2em;
+        vertical-align: -webkit-baseline-middle;
+        color:#000;
+        font-weight: bold;
+        cursor:pointer;
+        outline: none;
+        border-radius: 12px;
+    }
+    .action form .input-group-button input[value="Valider"]{
+        background-color: #103f85;
+        border-color:#103f85;
+    }
+    .action form .input-group-button input[value="Supprimer"]{
+        background-color: rgb(243, 16, 16);
+        border-color:rgb(243, 16, 16);
+    }
+    /*.card-container-right .card-right-bottom{
         width: 90%;
         height: 18em;
-        background-color: aliceblue;
         margin: 0em auto;
+        display: flex;
+        flex-direction: column;
     }
+    .card-right-bottom .card-right-info-action{
+        display: flex;
+        flex-direction: row;
+    }
+    .card-right-bottom .card-right-info-action .card-right-action{
+        display: flex;
+        flex-direction: row;
+    }
+    .card-right-bottom .card-right-info{
+        display: flex;
+        flex-direction: row;
+        gap:4em;
+    }
+    .card-right-bottom .card-right-info .card-right-top-info{
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        cursor: pointer;
+        gap:8em;
+
+    }
+    .card-right-top-info .card-right-info-input h4{
+        display: flex;
+        align-content: flex-start;
+        justify-items: flex-start;
+        justify-content: flex-start;
+        align-items: flex-start;
+    }
+    .card-right-info .card-right-action {
+        margin-left: 4em;
+        width: auto;
+        padding: .5em;
+        align-items: baseline;
+        gap:2em;
+    }
+    .card-right-bottom .card-right-info input{
+        width:4em ;
+        height:2em;
+    }*/
 </style>
