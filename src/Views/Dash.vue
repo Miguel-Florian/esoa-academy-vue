@@ -46,8 +46,8 @@
                                 </tr>
                             </thead>
                             <tbody>
-                                <tr class="color" v-for="academicien in academiciens" :key="academicien.numero">
-                                    <td>{{academicien.numero}}</td>
+                                <tr class="color" v-for="academicien in academiciens" :key="academicien.dossart">
+                                    <td>{{academicien.dossart}}</td>
                                     <td>{{academicien.nom}}</td>
                                     <td>{{academicien.prenom}}</td>
                                     <td>{{academicien.poste}}</td>
@@ -79,60 +79,20 @@
             </div>
 </template>
 <script>
+    import Data from '../Data/data.json';
 const date = new Date();
-const recrues =[
-     {numero:8,nom:"Camille",prenom:"Oscar",age:"22",taille:"1.65",poids:49,poste:"Milieu Défensif"},
-     {numero:4,nom:"Jules",prenom:"Cruz",age:"27",taille:"1.45",poids:45,poste:"Ailier Droit"},
-     {numero:28,nom:"Oscar",prenom:"Mingueza",age:"25",taille:"1.70",poids:49,poste:"Milieu Défensif"},
-     {numero:18,nom:"Oscar",prenom:"Mingueza",age:"25",taille:"1.70",poids:49,poste:"Milieu Offensif"},
-     {numero:11,nom:"Luc",prenom:"De Lafonte",age:"20",taille:"1.45",poids:45,poste:"Gardien de but"},
-     
- ];
- const academiciens = [
-     {numero:1,nom:"Luc",prenom:"De Lafonte",age:"20",taille:"1.45",poids:45,poste:"Gardien de bur"},
-     {numero:12,nom:"Mathieu",prenom:"Dane",age:"18",taille:"1.50",poids:60,poste:"Ailier Gauche"},
-     {numero:7,nom:"Alonzo",prenom:"Scheez",age:"30",taille:"1.45",poids:65,poste:"Milieu Offensif"},
-     {numero:10,nom:"Christian",prenom:"De La Marte",age:"24",taille:"1.45",poids:44,poste:"Défenseur Central"},
-     {numero:8,nom:"Camille",prenom:"Oscar",age:"22",taille:"1.65",poids:49,poste:"Milieu Défensif"},
-     {numero:14,nom:"Jules",prenom:"Cruz",age:"27",taille:"1.45",poids:45,poste:"Ailier Droit"},
-     {numero:18,nom:"Oscar",prenom:"Mingueza",age:"25",taille:"1.70",poids:49,poste:"Milieu Défensif"},
-     {numero:11,nom:"Luc",prenom:"De Lafonte",age:"20",taille:"1.45",poids:45,poste:"Gardien de bur"},
-     {numero:22,nom:"Mathieu",prenom:"Dane",age:"18",taille:"1.50",poids:60,poste:"Ailier Gauche"},
-     {numero:17,nom:"Alonzo",prenom:"Scheez",age:"30",taille:"1.45",poids:65,poste:"Milieu Offensif"},
-     {numero:16,nom:"Jules",prenom:"Cruz",age:"27",taille:"1.45",poids:45,poste:"Ailier Droit"},
-     {numero:19,nom:"Oscar",prenom:"Mingueza",age:"25",taille:"1.70",poids:49,poste:"Milieu Défensif"},
-     {numero:5,nom:"Luc",prenom:"De Lafonte",age:"20",taille:"1.45",poids:45,poste:"Gardien de bur"},
-     {numero:6,nom:"Mathieu",prenom:"Dane",age:"18",taille:"1.50",poids:60,poste:"Ailier Gauche"},
-     {numero:13,nom:"Alonzo",prenom:"Scheez",age:"30",taille:"1.45",poids:65,poste:"Milieu Offensif"},
-
- ];
- const matches =[
-     {id:1,versus:["Fc Barcelone","Juventus"],date:["19","07","21"]},
-     {id:2,versus:["Athletico Madrid","Fc Barcelone"],date:["26","07","21"]},
-     {id:3,versus:["Real Madrid","Fc Barcelone"],date:["12","10","21"]},
-     {id:4,versus:["Fc Barcelone","Seville FC"],date:["09","10","21"]},
-     {id:5,versus:["Athletic Club","Fc Barcelone"],date:["13","11","21"]},
-     {id:6,versus:["Fc Barcelone","Real Betis"],date:["27","12","21"]},
-     {id:7,versus:["Roma","Fc Barcelone"],date:["29","01","22"]},
-     {id:8,versus:["Fc Barcelone","Man.City"],date:["13","02","22"]},
-     {id:9,versus:["PSG","Fc Barcelone"],date:["19","03","22"]},
-     {id:10,versus:["Juventus","Fc Barcelone"],date:["04","04","21"]},
-     {id:12,versus:["Fc Barcelone","Ath.Madrid"],date:["10","04","21"]},
-     {id:13,versus:["Fc Barcelone","Real Madrid"],date:["18","04","21"]},
-     {id:14,versus:["Seville FC","Fc Barcelone"],date:["22","04","21"]},
- ]
 export default {
  name:"Dash",
    data:function(){
        return{
-       academicientableTitles:["Numero","Nom","Prenom","Postes",],
-       recrueTableTitles:["Nom","Prenom","Postes"],
-       academiciens,
-       recrues,
-       matchTitles:["Domicile","Exterieur","Date"],
-       matches,
-       date,
-       SortMatch:[],
+           academiciens : Data.academiciens,
+           matches : Data.matches,
+           recrues : Data.recrues,
+            academicientableTitles:["Dossart","Nom","Prenom","Postes"],
+            recrueTableTitles:["Nom","Prenom","Postes"],
+            matchTitles:["Domicile","Exterieur","Date"],
+            date,
+            SortMatch:[],
        }
     },
     methods:{
