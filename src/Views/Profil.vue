@@ -108,9 +108,9 @@ export default {
                 }
                     
                 this.player.Dossart = this.info.Dossart= value[0];
-                this.player.Nom = value[1];     //reste a modifier dans le data.json
-                this.player.Prenom = value[2];  //reste a modifier dans le data.json
-                this.player.Age= value[3];      //reste a modifier dans le data.json
+                this.player.Nom = value[1];     //reste de le modifier dans le data.json
+                this.player.Prenom = value[2];  //reste de le modifier dans le data.json
+                this.player.Age= value[3];      //reste de le modifier dans le data.json
                 this.player.Taille = this.info.Taille= value[4];
                 this.player.Poids = this.info.Poids = value[5];
                 this.player.Poste = this.info.Poste = value[6];
@@ -244,7 +244,7 @@ export default {
         gap:2em;
         align-content: center;
         justify-content: center;
-        width: 40%;
+        width: calc(60% - 30%);
         margin: 0 auto;
         padding:1em;
     }
@@ -286,7 +286,7 @@ export default {
         width: 7em;
         height: 2em;
         vertical-align: -webkit-baseline-middle;
-        color:#000;
+        color:#fff;
         font-weight: bold;
         cursor:pointer;
         outline: none;
