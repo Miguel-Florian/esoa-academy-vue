@@ -1,216 +1,252 @@
+/* eslint-disable vue/no-deprecated-filter */
 <template>
-    <div class="card-container">
-                <div class="card">
-                    <div class="card-title">Académiciens</div>
-                    <div class="card-icon">
-                        <div class="card-nombre">{{academiciens.length}}</div>
-                        <i class="las la-users la-3x"></i>
-                    </div>
-                </div>
-                <div class="card scroll">
-                    <div class="card-title"><span>{{recrues.length}}</span> Nouvelle<span v-if="recrueTableTitles.length>=2">s</span> Recrue<span v-if="recrueTableTitles.length>=2">s</span>
-                        <div class="timetable" v-scroll="handleScroll">
-                        <table class="recrue">
-                            <thead>
-                                <tr>
-                                    <td v-for="recrueTableTitle in recrueTableTitles" :key="recrueTableTitle">{{recrueTableTitle}}</td>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr class="color" v-for="recrue in recrues" :key="recrue.numero" >
-                                    <td>{{recrue.nom}}</td>
-                                    <td>{{recrue.prenom}}</td>
-                                    <td>{{recrue.poste}}</td>
-                                </tr>
-                                
-                            </tbody>
-                        </table>
-                        </div>
-                    </div>
-                </div>
-                <div class="card">
-                    <div class="card-title">Prochaines Rencontres</div>
-                    <div class="card-match" >
-                        <div class="match-versus"></div>
-                    </div>
-                </div>
-            </div>
-            <div class="card-container">
-                <div class="card left scroll">
-                    <h5>Listes de tous les académiciens</h5>
-                    <div class="timetable">
-                        <table class="table">
-                            <thead>
-                                <tr>
-                                    <td v-for="academicientableTitle in academicientableTitles" :key="academicientableTitle">{{academicientableTitle}}</td>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr class="color" v-for="academicien in academiciens" :key="academicien.dossart">
-                                    <td>{{academicien.dossart}}</td>
-                                    <td>{{academicien.nom}}</td>
-                                    <td>{{academicien.prenom}}</td>
-                                    <td>{{academicien.poste}}</td>
-                                </tr>
-                                
-                            </tbody>
-                        </table>
-                    </div>
-                </div>
-                <div class="card right scroll"><h5>Tableau de tous les matchs</h5>
-                    <div class="timetable">
-                        <table class="match">
-                            <thead>
-                                <tr>
-                                    <td class="td-head" v-for="matchTitle in matchTitles" :key="matchTitle">{{matchTitle}}</td>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr class="color" v-for="matche in matches" :key="matche.id" >
-                                    <td>{{matche.versus[0]}}</td>
-                                    <td>{{matche.versus[1]}}</td>
-                                    <td>{{matche.date[0]}}/{{matche.date[1]}}/{{parseInt(matche.date[2])}}</td>
-                                </tr>
-                                
-                            </tbody>
-                        </table>
-                        </div>
-                </div>
-            </div>
+  <div class="card-container">
+    <div class="card">
+      <div class="card-title">Académiciens</div>
+      <div class="card-icon">
+        <div class="card-nombre">{{ academiciens.length }}</div>
+        <i class="las la-users la-3x"></i>
+      </div>
+    </div>
+    <div class="card scroll">
+      <div class="card-title">
+        <span>{{ recrues.length }}</span> Nouvelle<span
+          v-if="recrueTableTitles.length >= 2"
+          >s</span
+        >
+        Recrue<span v-if="recrueTableTitles.length >= 2">s</span>
+        <div class="timetable" v-scroll="handleScroll">
+          <table class="recrue">
+            <thead>
+              <tr>
+                <td
+                  v-for="recrueTableTitle in recrueTableTitles"
+                  :key="recrueTableTitle"
+                >
+                  {{ recrueTableTitle }}
+                </td>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="color" v-for="recrue in recrues" :key="recrue.numero">
+                <td>{{ recrue.nom }}</td>
+                <td>{{ recrue.prenom }}</td>
+                <td>{{ recrue.poste }}</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-title">Prochaines Rencontres</div>
+      <div class="card-match">
+        <div class="match-versus">
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="card-container">
+    <div class="card left scroll">
+      <h5>Listes de tous les académiciens</h5>
+      <div class="timetable">
+        <table class="table">
+          <thead>
+            <tr>
+              <td
+                v-for="academicientableTitle in academicientableTitles"
+                :key="academicientableTitle"
+              >
+                {{ academicientableTitle }}
+              </td>
+            </tr>
+          </thead>
+          <tbody>
+            <tr
+              class="color"
+              v-for="academicien in academiciens"
+              :key="academicien.dossart"
+            >
+              <td>{{ academicien.dossart }}</td>
+              <td>{{ academicien.nom }}</td>
+              <td>{{ academicien.prenom }}</td>
+              <td>{{ academicien.poste }}</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <div class="card right scroll">
+      <h5>Tableau de tous les matchs</h5>
+      <div class="timetable">
+        <table class="match">
+          <thead>
+            <tr>
+              <td
+                class="td-head"
+                v-for="matchTitle in matchTitles"
+                :key="matchTitle"
+              >
+                {{ matchTitle }}
+              </td>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="color" v-for="matche in matches" :key="matche.id">
+              <td>{{ matche.versus[0] }}</td>
+              <td>{{ matche.versus[1] }}</td>
+              <td>
+                {{ matche.date.jour }}/{{ matche.date.mois }}/{{
+                  matche.date.annee
+                }}
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
 </template>
 <script>
-    import Data from '../Data/data.json';
+import Data from "../Data/data.json";
 const date = new Date();
 export default {
- name:"Dash",
-   data:function(){
-       return{
-           academiciens : Data.academiciens,
-           matches : Data.matches,
-           recrues : Data.recrues,
-            academicientableTitles:["Dossart","Nom","Prenom","Postes"],
-            recrueTableTitles:["Nom","Prenom","Postes"],
-            matchTitles:["Domicile","Exterieur","Date"],
-            date,
-            SortMatch:[],
-       }
-    },
-    methods:{
+  name: "Dash",
+  data: function () {
+    return {
+      academiciens: Data.academiciens,
+      matches: Data.matches,
+      recrues: Data.recrues,
+      academicientableTitles: ["Dossart", "Nom", "Prenom", "Postes"],
+      recrueTableTitles: ["Nom", "Prenom", "Postes"],
+      matchTitles: ["Domicile", "Exterieur", "Date"],
+      date,
+      SortMatch: [],
+    };
+  },
+  computed :{
+      filteredNextMatch(){
+          console.log("OK");
+          return (this.matches.date).filter((d)=>{
+              return d.mois.includes(this.date.getMonth())
+          })
+        },
+  },
+  methods: {
         handleScroll: function (evt, el) {
             if (window.scrollY > 2) {
                 el.setAttribute(
-                'style',
-                'opacity: 1; transform: translate3d(0, -10px, 0)'
-                )
+                "style",
+                "opacity: 1; transform: translate3d(0, -10px, 0)"
+                );
             }
-            return window.scrollY > 100
+            return window.scrollY > 100;
         },
-        /*sharedata(){
+    /*sharedata(){
                return (this.$router.push({name:"Pro",params:{data:this.academiciens}}));
             }*/
+  },
+  directives: {
+    scroll: {
+      inserted: function (el, binding) {
+        let f = function (evt) {
+          if (binding.value(evt, el)) {
+            window.removeEventListener("scroll", f);
+          }
+        };
+        window.addEventListener("scroll", f);
+      },
     },
-    directives:{
-        scroll: {
-            inserted: function (el, binding) {
-                let f = function (evt) {
-                if (binding.value(evt, el)) {
-                    window.removeEventListener('scroll', f)
-                    }
-                    }
-                window.addEventListener('scroll', f)
-                },
-            }
-    
-    }
-}
+  },
+};
 </script>
 
 <style scoped>
-.router-link-active{
-    font-weight: bold;
-    text-decoration: none;     
-    background-color: rgb(0, 0, 0);
-}  
-.router-link-active .icon .title{
-    color: #EF5A31;
+.router-link-active {
+  font-weight: bold;
+  text-decoration: none;
+  background-color: rgb(0, 0, 0);
 }
-.card-container{
-    display: flex;
-    flex-direction: row;
-    gap: 1em;
-    justify-content: center;
-    align-content: center;
-    width:97%;
-    padding: 1em;
+.router-link-active .icon .title {
+  color: #ef5a31;
 }
-.card{
-    width: 40em;
-    height: 8em;
-    padding: 1em;
-    background-color:#fff ;
-    border-radius: 12px;
+.card-container {
+  display: flex;
+  flex-direction: row;
+  gap: 1em;
+  justify-content: center;
+  align-content: center;
+  width: 97%;
+  padding: 1em;
+}
+.card {
+  width: 40em;
+  height: 8em;
+  padding: 1em;
+  background-color: #fff;
+  border-radius: 12px;
 }
 /**Scroll */
-.card.scroll,.card-container.scroll{
-    overflow-y: scroll;
+.card.scroll,
+.card-container.scroll {
+  overflow-y: scroll;
 }
 ::-webkit-scrollbar {
-    display: none;
+  display: none;
 }
-.card .card-title{
-    font-weight: bold;
+.card .card-title {
+  font-weight: bold;
 }
-.card-icon{
-    margin-top:2em ;
-    display: flex;
-    flex-direction: column;
+.card-icon {
+  margin-top: 2em;
+  display: flex;
+  flex-direction: column;
 }
-.card-icon .card-nombre{
-    font-size: 28px;
-    font-weight: bold;
+.card-icon .card-nombre {
+  font-size: 28px;
+  font-weight: bold;
 }
-.timetable .recrue{
-    width: 100%;
-    border-collapse: collapse;
-    margin: 0.1em auto;
-    padding: 0.1em;
-    height: 4em;
-    overflow: hidden;
-
+.timetable .recrue {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 0.1em auto;
+  padding: 0.1em;
+  height: 4em;
+  overflow: hidden;
 }
-.timetable .recrue tr td,.timetable .match tbody tr td{
-    font-size: 12px;
+.timetable .recrue tr td,
+.timetable .match tbody tr td {
+  font-size: 12px;
 }
-.timetable .match{
-    margin:0 auto;
+.timetable .match {
+  margin: 0 auto;
 }
-.match .td-head{
-    color: #2c3e50;
-    font-size: 14px;
-    font-weight: bold;
-
+.match .td-head {
+  color: #2c3e50;
+  font-size: 14px;
+  font-weight: bold;
 }
-.timetable .table{
-    width: 100%;
-    border-collapse: collapse;
-    margin-top: 2em;
-    padding: 1em;
+.timetable .table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 2em;
+  padding: 1em;
 }
-.timetable .table thead td{
-   font-weight: 600; 
+.timetable .table thead td {
+  font-weight: 600;
 }
-table tr{
-    border-bottom:1px solid rgba(0,0,0,0.1);
+table tr {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 }
-table tr td{
-    padding:1em;
+table tr td {
+  padding: 1em;
 }
-.card-container .left{
-    width: 100%;
-    height:30em;
+.card-container .left {
+  width: 100%;
+  height: 30em;
 }
-.card-container .right{
-    width: 46%;
-    height:30em
+.card-container .right {
+  width: 46%;
+  height: 30em;
 }
 </style>
