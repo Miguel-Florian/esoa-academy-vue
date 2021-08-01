@@ -6,11 +6,11 @@
                 "Fc Barcelone",
                 "Juventus"
             ],
-            "date": [
-                "19",
-                "07",
-                "21"
-            ]
+            "date": {
+                "jour": 2,
+                "mois": 8,
+                "annee":21
+            }
         },
         {
             "id": 2,
@@ -18,11 +18,11 @@
                 "Athletico Madrid",
                 "Fc Barcelone"
             ],
-            "date": [
-                "26",
-                "07",
-                "21"
-            ]
+            "date": {
+                "jour": 5,
+                "mois": 8,
+                "annee": 21
+            }
         },
         {
             "id": 3,
@@ -30,11 +30,11 @@
                 "Real Madrid",
                 "Fc Barcelone"
             ],
-            "date": [
-                "12",
-                "10",
-                "21"
-            ]
+            "date": {
+                "jour": 8,
+                "mois": 8,
+                "annee":21
+            }
         },
         {
             "id": 4,
@@ -42,11 +42,11 @@
                 "Fc Barcelone",
                 "Seville FC"
             ],
-            "date": [
-                "09",
-                "10",
-                "21"
-            ]
+            "date": {
+                "jour": 12,
+                "mois": 8,
+                "annee":21
+            }
         },
         {
             "id": 5,
@@ -54,11 +54,11 @@
                 "Athletic Club",
                 "Fc Barcelone"
             ],
-            "date": [
-                "13",
-                "11",
-                "21"
-            ]
+            "date": {
+                "jour": 15,
+                "mois": 7,
+                "annee":21
+            }
         },
         {
             "id": 6,
@@ -66,11 +66,11 @@
                 "Fc Barcelone",
                 "Real Betis"
             ],
-            "date": [
-                "27",
-                "12",
-                "21"
-            ]
+            "date": {
+                "jour": 20,
+                "mois": 8,
+                "annee":21
+            }
         },
         {
             "id": 7,
@@ -78,11 +78,11 @@
                 "Roma",
                 "Fc Barcelone"
             ],
-            "date": [
-                "29",
-                "01",
-                "22"
-            ]
+            "date": {
+                "jour": 23,
+                "mois": 8,
+                "annee":21
+            }
         },
         {
             "id": 8,
@@ -90,11 +90,11 @@
                 "Fc Barcelone",
                 "Man.City"
             ],
-            "date": [
-                "13",
-                "02",
-                "22"
-            ]
+            "date": {
+                "jour": 26,
+                "mois": 8,
+                "annee": 21
+            }
         },
         {
             "id": 9,
@@ -102,11 +102,11 @@
                 "PSG",
                 "Fc Barcelone"
             ],
-            "date": [
-                "19",
-                "03",
-                "22"
-            ]
+            "date": {
+                "jour": 30,
+                "mois": 8,
+                "annee": 21
+            }
         },
         {
             "id": 10,
@@ -114,11 +114,11 @@
                 "Juventus",
                 "Fc Barcelone"
             ],
-            "date": [
-                "04",
-                "04",
-                "21"
-            ]
+            "date": {
+                "jour": 2,
+                "mois": 9,
+                "annee": 21
+            }
         },
         {
             "id": 12,
@@ -126,11 +126,11 @@
                 "Fc Barcelone",
                 "Ath.Madrid"
             ],
-            "date": [
-                "10",
-                "04",
-                "21"
-            ]
+            "date": {
+                "jour": 9,
+                "mois": 9,
+                "annee":21
+            }
         },
         {
             "id": 13,
@@ -138,11 +138,11 @@
                 "Fc Barcelone",
                 "Real Madrid"
             ],
-            "date": [
-                "18",
-                "04",
-                "21"
-            ]
+            "date": {
+                "jour": 13,
+                "mois": 9,
+                "annee": 21
+            }
         },
         {
             "id": 14,
@@ -150,11 +150,11 @@
                 "Seville FC",
                 "Fc Barcelone"
             ],
-            "date": [
-                "22",
-                "04",
-                "21"
-            ]
+            "date": {
+                "jour": 17,
+                "mois": 9,
+                "annee": 21
+            }
         }
     ],
 "recrues": [
@@ -239,7 +239,7 @@
             "age": 24,
             "taille": 1.45,
             "poids": 44,
-            "poste": "Défenseur Central"
+            "poste": "Latéral droit"
         },
         {
             "dossart": 8,
@@ -320,7 +320,7 @@
             "age": 20,
             "taille": 1.45,
             "poids": 45,
-            "poste": "Gardien de bur"
+            "poste": "Gardien de but"
         },
         {
             "dossart": 6,
