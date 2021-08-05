@@ -16,7 +16,7 @@
                     </router-link>
                 </li>
                 <li>
-                    <router-link to="Profil" @click="sharedata()" >
+                    <router-link to="Profil" >
                         <span class="icon"><i class="las la-id-card-alt"></i></span>
                         <span class="title">Profil joueur</span>
                     </router-link>
@@ -97,16 +97,6 @@ export default {
             nav.classList.toggle('active');
             main.classList.toggle('active');
             },
-        /*sharedata(){
-            return(
-            this.$router.push({
-                name:"profil",
-                params:{
-                    data:this.academiciens
-                }
-            }))
-        },*/
-            
         },
 
 }
