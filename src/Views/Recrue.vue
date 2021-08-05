@@ -5,15 +5,15 @@
   <div class="container">
     <div class="card-container">
       <div class="card-right">
-        <h5>Remplir le formulaire (nom, prenom, date de naissance,lieu, age, poste, dossard, taille, poids)<!--(gerez ceci avec une data)--></h5>
+        <h5>Veuillez remplir le formulaire</h5>
         <form action="" method="post">
           <div class="input-group">
             <label for="nom"><i class="las la-user-circle la-2x"></i></label>
-            <input type="text" name="nom" id="nom" required />
+            <input type="text" name="nom" id="nom" required placeholder="Entrer le nom du joueur"/>
           </div>
           <div class="input-group">
             <label for="prenom"><i class="las la-user-circle la-2x"></i></label>
-            <input type="text" name="prenom" id="prenom" required />
+            <input type="text" name="prenom" id="prenom" required placeholder="Entrer le prenom du joueur"/>
           </div>
           <div class="input-group">
             <label for="object"><i class="las la-calendar la-2x"></i></label>
@@ -21,27 +21,27 @@
           </div>
           <div class="input-group">
             <label for="lieu"><i class="las la-map-marker-alt la-2x"></i></label>
-            <input type="text" name="lieu" id="lieu" required />
+            <input type="text" name="lieu" id="lieu" required placeholder="Entrer le lieu de naissance"/>
           </div>
           <div class="input-group">
             <label for="age"><i class="las la-sort-numeric-up-alt la-2x"></i></label>
-            <input type="text" name="age" id="age" required />
+            <input type="number" name="age" id="age" required placeholder="Entrer l'age du joueur"/>
           </div>
           <div class="input-group">
             <label for="poste"><i class="las la-shoe-prints la-2x"></i></label>
-            <input type="text" name="poste" id="poste" required />
+            <input type="text" name="poste" id="poste" required placeholder="Entrer son poste"/>
           </div>
           <div class="input-group">
             <label for="dossart"><i class="las la-dice la-2x"></i></label>
-            <input type="number" name="dossart" id="dossart" required />
+            <input type="number" name="dossart" id="dossart" required placeholder="Entrer le dossard du joueur"/>
           </div>
           <div class="input-group">
             <label for="taille"><i class="las la-ruler-vertical la-2x"></i></label>
-            <input type="number" name="taille" id="taille" required />
+            <input type="number" name="taille" id="taille" required placeholder="Entrer la taille du joueur"/>
           </div>
           <div class="input-group">
             <label for="poids"><i class="las la-weight la-2x"></i></label>
-            <input type="number" name="poids" id="poids" required />
+            <input type="number" name="poids" id="poids" required placeholder="Entrer le poids du joueur"/>
           </div>
           <div class="input-group">
             <label for="file">Ajouter une photo:</label>
@@ -137,7 +137,7 @@ form .input-group input[type="date"] {
   outline-color: none;
   border-radius: 12px;
   border: 1px solid rgb(168, 165, 165);
-  padding: 0.2em;
+  padding-left: 1em;
   margin-inline-end: auto;
 }
 form .input-group input[type="file"] {
