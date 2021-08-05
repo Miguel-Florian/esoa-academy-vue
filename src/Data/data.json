@@ -340,5 +340,54 @@
             "poids": 65,
             "poste": "Milieu Offensif"
         }
-    ]
+    ],
+"mail":[
+    {
+        "id":1,
+        "sender":"moi@gmail.com",
+        "receiver":"lui@gmail.com",
+        "message":"Hello My dear !"
+    },
+    {
+        "id": 2,
+        "sender": "il@gmail.com",
+        "receiver": "vous@gmail.com",
+        "message": "Vous êtes convoqué au bureau du chef!"
+    },
+    {
+        "id": 3,
+        "sender": "mail@gmail.com",
+        "receiver": "lui@gmail.com",
+        "message": "Vous avez recu le bilan financier de ce mois !"
+    },
+    {
+        "id": 4,
+        "sender": "elle@gmail.com",
+        "receiver": "toi@gmail.com",
+        "message": "Voici le planning du mois en fichier pdf !!!"
+    },{
+        "id": 1,
+        "sender": "moi@gmail.com",
+        "receiver": "lui@gmail.com",
+        "message": "Hello My dear !"
+    },
+    {
+        "id": 2,
+        "sender": "il@gmail.com",
+        "receiver": "vous@gmail.com",
+        "message": "Vous êtes convoqué au bureau du chef!"
+    },
+    {
+        "id": 3,
+        "sender": "mail@gmail.com",
+        "receiver": "lui@gmail.com",
+        "message": "Vous avez recu le bilan financier de ce mois !"
+    },
+    {
+        "id": 4,
+        "sender": "elle@gmail.com",
+        "receiver": "toi@gmail.com",
+        "message": "Voici le planning du mois en fichier pdf !!!"
+    }
+]
 }
