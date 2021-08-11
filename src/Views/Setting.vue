@@ -14,11 +14,11 @@
           <input type="text" name="prenom" id="prenom" required/>
         </div>
         <div class="input-group">
-          <label for="eamil"><i class="las la-sms la-2x"></i></label>
+          <label for="email"><i class="las la-sms la-2x"></i></label>
           <input type="email" name="mail" id="mail" required/>
         </div>
         <div class="input-group">
-          <label for="grade"><i class="las la-sms la-2x"></i></label>
+          <label for="grade"><i class="las la-id-card la-2x"></i></label>
           <input type="text" name="grade" id="grade" required/>
         </div>
         <div class="input-group">
