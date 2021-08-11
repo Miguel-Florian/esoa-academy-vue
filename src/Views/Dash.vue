@@ -39,9 +39,11 @@
       </div>
     </div>
     <div class="card">
-      <div class="card-title">Prochaines Rencontres</div>
+      <div class="card-title">Prochaine Rencontre</div>
       <div class="card-match">
         <div class="match-versus">
+            <h3 v-if="SortMatch && SortMatch.length!=0">{{filteredNextMatch()}}</h3>
+            <h3 v-else>{{NoMatch}}</h3>
         </div>
       </div>
     </div>
@@ -122,16 +124,10 @@ export default {
       matchTitles: ["Domicile", "Exterieur", "Date"],
       date,
       SortMatch: [],
+      NoMatch :"Aucune rencontre cette journée"
     };
   },
-  computed :{
-      filteredNextMatch(){
-          console.log("OK");
-          return (this.matches.date).filter((d)=>{
-              return d.mois.includes(this.date.getMonth())
-          })
-        },
-  },
+
   methods: {
         handleScroll: function (evt, el) {
             if (window.scrollY > 2) {
@@ -141,6 +137,18 @@ export default {
                 );
             }
             return window.scrollY > 100;
+        },
+        filteredNextMatch(){
+          for(let i in this.matches){
+            if( (this.matches[i].date.mois == this.date.getMonth()+1))
+            {
+              if((this.matches[i].date.jour == this.date.getDate())){
+                this.SortMatch=this.matches[i];
+                console.log(this.SortMatch)
+                return (this.SortMatch.versus[0]+" VS "+this.SortMatch.versus[1])
+              }
+            }
+          }
         },
     /*sharedata(){
                return (this.$router.push({name:"Pro",params:{data:this.academiciens}}));
@@ -220,6 +228,9 @@ export default {
 }
 .timetable .match {
   margin: 0 auto;
+}
+.match-versus h3{
+  margin: 2.5em auto;
 }
 .match .td-head {
   color: #2c3e50;
