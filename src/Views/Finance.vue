@@ -2,6 +2,9 @@
     <div class="overview">
         <p>Finances</p>
    </div>
+    <div class="finance">
+        <h3>Design a penser !</h3>
+    </div>
 </template>
 <script>
 export default {
