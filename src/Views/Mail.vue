@@ -8,27 +8,41 @@
       <div class="card-item-message" v-for="message in mail" :key="message.id">
         <div class="row-sender">{{ message.sender }}</div>
         <div class="card-action">
-          <input type="button" value="Lire" @click="read" :id="message.id" />
+          <input type="button"  class="lire" value="Lire" @click="read(`${message.id}`)" :id="message.id" :key="message.id" />
           <input
             type="button"
             value="Repondre"
-            @click="reply"
+            @click="reply(`${message.id}`)"
             :id="message.id"
+            class="repondre"
           />
         </div>
       </div>
     </div>
     <div class="card-right">
-      <h5>Au clic sur repondre/lire cela se charge ici</h5>
-      <div class="reply">
+        <h3 class="message-view" v-if="visible"> Cliquez sur lire ou repondre pour charger le composant</h3>
+      
+      <!-- Au clic sur repondre le formulaire se charge
+           au clic sur lire le message charge et par defaut la partie qui chargera ces contenus à 
+           ces deux evenements aura comme texte "Cliquer sur lire ou repondre"
+      -->
+      <div class="read" v-if="lire">
+        <div class="header-message">
+          <div class="from"><h3>De : <span>{{message.De}}</span></h3></div> 
+          <div class="objet"><h3>Objet : <span>{{message.objet}}</span></h3></div>  
+          <div class="message"><p>{{message.message}}</p></div>
+        </div>
+      </div>
+
+      <div class="reply" v-if="repondre">
         <form action="" method="post">
           <div class="input-group">
             <label for="to">A : </label>
-            <input type="email" name="receiver" id="receiver" />
+            <input type="email" name="receiver" id="receiver" :value="message.De"/>
           </div>
           <div class="input-group">
             <label for="from">De : </label>
-            <input type="email" name="sender" id="sender" />
+            <input type="email" name="sender" id="sender" :value="message.A" />
           </div>
           <div class="input-group">
             <label for="object">Objet :</label>
@@ -52,6 +66,7 @@
           </div>
         </form>
       </div>
+
     </div>
   </div>
 </template>
@@ -61,22 +76,50 @@ export default {
   name: "Mail",
   data: () => {
     return {
+      visible:true,
       lire: false,
       repondre: false,
       mail: Data.mail,
-      message: "",
+      message: {
+        "id":null,
+        "De":"",
+        "A":"",
+        "message":"",
+        "objet":""
+      },
     };
   },
   methods: {
-    read: () => {
-      this.lire == true;
-      var a = document.getElementById(`{message.id}`);
-      console.log(a);
+    read(a){
+      this.lire = true;
+      this.repondre = false
+      this.visible = false
+      this.mail.forEach(sms => {
+        if(sms.id == a) {
+          this.message.id = sms.id;
+          this.message.De = sms.sender;
+          this.message.message = sms.message;
+          this.message.objet = sms.objet;
+          this.message.A = sms.receiver;
+        }
+      });
     },
-    reply: () => {
-      console.log("ok");
-      return this.repondre == true;
-    },
+    reply(b) {
+            this.repondre = true;
+            this.lire = false
+            this.visible = false
+            //console.log(b);
+            this.mail.forEach(sms => {
+        if(sms.id == b) {
+          this.message.id = sms.id;
+          this.message.De = sms.sender;
+          this.message.message = sms.message;
+          this.message.objet = sms.objet;
+          this.message.A = sms.receiver;
+        }
+      });
+            
+          },
   },
 };
 </script>
@@ -112,6 +155,24 @@ export default {
 ::-webkit-scrollbar {
   display: none;
 }
+.card-right .message-view{
+  margin: 35% auto;
+}
+.card-right .header-message{
+  display:flex;
+  flex-direction: column;
+  gap:1em;
+  padding: 1em;
+  align-items: flex-start;
+}
+.card-right .header-message h3{
+  font-size: 14px;
+}
+.card-right .message p{
+  text-align: justify;
+  line-height: 20px;
+}
+
 .card-left .card-item-message {
   display: flex;
   flex-direction: row;
