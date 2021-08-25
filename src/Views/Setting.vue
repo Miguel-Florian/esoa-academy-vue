@@ -5,6 +5,10 @@
   <div class="container">
       <h5>formulaire de parametre de l'admin</h5>
       <form action="" method="post">
+        <!-- Logique possible:
+          effectuer cela comme dans profil.vue, etablir un formulaire d'une part et les données recues via la bd d'autre part
+          de telle sorte qu'en modifiant les données du formulaire cela modifie ceux de la bd
+        -->
         <div class="input-group">
           <label for="nom"><i class="las la-user-circle la-2x"></i></label>
           <input type="text" name="nom" id="nom" required/>

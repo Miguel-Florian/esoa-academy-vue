@@ -18,25 +18,27 @@
                                 <td>{{matche.versus[0]}}</td>
                                 <td>{{matche.versus[1]}}</td>
                                 <td>{{matche.date.jour}}/{{matche.date.mois}}/{{matche.date.annee}}</td>
+                                <td v-if="(matche.date.jour < date.getDate()) && (matche.date.mois <= date.getMonth()+1)"><span class="score">{{matche.score[0]}} - {{matche.score[1]}}</span></td>
+                                <td v-else><span class="nogame">Pas encore joué</span></td>
                             </tr>   
                         </tbody>
                     </table>
                 </div>
-        </div>
-        <div class="card-right">
-            <h5>Les derniers scores des différentes rencontres</h5>
         </div>
     </div>
    
 </template>
 <script>
 import Data from '../Data/data.json';
+const date = new Date()
 export default {
     name:"Rencontres",
     data(){
         return{
             matches:Data.matches,
-            matchTitles:["Domicile","Exterieur","Date"],
+            matchTitles:["Domicile","Exterieur","Date","Score"],
+            matcheScore:["Domicile","Exterieur","Score"],
+            date,
         }
     }   
 }
@@ -62,8 +64,9 @@ export default {
         padding: 1em;
         margin: auto;
     }
-    .card-left,.card-right{
-        width: 50%;
+    .card-left /*.card-right*/
+    {
+        width: 100%;
         background-color: #fff;
         border-radius: 12px;
         height: 26em;
@@ -98,5 +101,21 @@ export default {
     }
     table tr td{
         padding:1em;
+    }
+    tbody td .score{
+        font-weight: bold;
+        font-size: 14px;
+        border-radius: 4px;
+        outline: none;
+        border-color: #ff8b00;
+        border:1px solid #ff8b00;
+        background-color: #ff8b00;
+        padding: 4px;
+        color: black;
+    }
+    tbody td .nogame{
+        font-weight: bold;
+        font-size: 14px;
+        border-radius: 4px;
     }
 </style>
