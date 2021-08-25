@@ -4,7 +4,7 @@
       <router-link to='/register'>Pas de compte? S'inscrire</router-link>
   </nav>
   <div class="container">
-    <div class="logo"><img src="../assets/esoa-academy.png" alt=""></div>
+    <div class="logo"><img src="../assets/logo.png" alt=""></div>
     <div class="content-form">
       <div class="title"><h2>Connexion</h2></div>
 
