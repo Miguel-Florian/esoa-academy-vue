@@ -3,10 +3,10 @@
     <p>Tournois</p>
   </div>
   <div class="card-details">
-    <div class="img"><img src="../assets/esoa-academy.png" alt="" /></div>
+    <div class="img"><img src="../assets/logo.png" alt="" /></div>
     <div class="text-aca"><h5>ESOA ACADEMY</h5></div>
-    <div class="text-loca"><em><h5>Avenue xxx, Pays</h5></em></div>
-    <div class="text-tel"><h5>+x xxxxxxxxx / +x xxxxxxxxx</h5></div>
+    <div class="text-loca"><em><h5>Bill Avenue, Cameroun</h5></em></div>
+    <div class="text-tel"><h5>+237 234 235 236 / +237 277 278 279</h5></div>
   </div>
   <div class="card-tournoi">
       <h4>Utiliser les tokens de la competition pour afficher les details des compétitions</h4>
@@ -33,7 +33,7 @@ export default {
 .card-details{
     display: flex;
     flex-direction: row;
-    gap:14%;
+    gap:10%;
     align-content: center;
     align-items: center;
     justify-content: center;
