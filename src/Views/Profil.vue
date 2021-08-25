@@ -38,6 +38,7 @@
            <div class="card-message" v-else><h5>Selectionner un joueur afin de voir ses attributs...</h5></div>
 
             <div class="action" v-if="(visible) && (player.length!=0)">
+                <!--Faire en sorte qu'en modifiant via le formulaire cela modifie soit dans la base de donnée ou dans le data.json -->
                 <form action="" method="post">
                     <div class="input-group" v-for="(value,key) in player" :key="key">
                         <label :for="key">{{key}}:</label> <br>
@@ -108,7 +109,7 @@ export default {
                 }
                     
                 this.player.Dossart = this.info.Dossart= value[0];
-                this.player.Nom = value[1];     //reste de le modifier dans le data.json
+                this.player.Nom = Data.academiciens.nom = value[1];     //reste de le modifier dans le data.json
                 this.player.Prenom = value[2];  //reste de le modifier dans le data.json
                 this.player.Age= value[3];      //reste de le modifier dans le data.json
                 this.player.Taille = this.info.Taille= value[4];
