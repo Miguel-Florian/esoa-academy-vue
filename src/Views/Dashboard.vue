@@ -65,7 +65,7 @@
                 <div class="toggle" @click="toggleMenu"><i class="las la-bars la-3x"></i></div>
                 <div class="search">
                     <label for="search">
-                        <input type="text" name="search" id="search" placeholder="Rechercher ...">
+                        <input type="text" name="search" id="search" placeholder="Rechercher un joueur">
                         <i class="las la-search la-1x"></i>
                     </label>
                 </div>
