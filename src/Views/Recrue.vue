@@ -7,6 +7,7 @@
       <div class="card-right">
         <h5>Veuillez remplir le formulaire</h5>
         <form action="" method="post">
+          <!-- En validant ce formulaire cela enregistre dans le bd-->
           <div class="input-group">
             <label for="nom"><i class="las la-user-circle la-2x"></i></label>
             <input type="text" name="nom" id="nom" required placeholder="Entrer le nom du joueur"/>
