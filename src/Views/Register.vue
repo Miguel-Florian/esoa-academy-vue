@@ -2,7 +2,7 @@
   <nav>
       <router-link to='/'>Accueil</router-link> | 
       <router-link to='/register'>Pas de compte? S'inscrire</router-link>
-      <div class="logo"><img src="../assets/esoa-academy.png" alt=""></div>
+      <div class="logo"><img src="../assets/logo.png" alt=""></div>
   </nav>
   
   <div class="container">
