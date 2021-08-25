@@ -42,8 +42,7 @@
       <div class="card-title">Prochaine Rencontre</div>
       <div class="card-match">
         <div class="match-versus">
-            <h3 v-if="SortMatch && SortMatch.length!=0">{{filteredNextMatch()}}</h3>
-            <h3 v-else>{{NoMatch}}</h3>
+            <h3>{{filteredNextMatch()}}</h3>
         </div>
       </div>
     </div>
@@ -124,10 +123,10 @@ export default {
       matchTitles: ["Domicile", "Exterieur", "Date"],
       date,
       SortMatch: [],
-      NoMatch :"Aucune rencontre cette journée"
+      visible:false,
+      //AllAcedemician : this.academiciens.join(this.recrues),
     };
   },
-
   methods: {
         handleScroll: function (evt, el) {
             if (window.scrollY > 2) {
@@ -139,17 +138,21 @@ export default {
             return window.scrollY > 100;
         },
         filteredNextMatch(){
+        //Il manque de faire à ce que ce soit dynamique en ayant acces au data.json
           for(let i in this.matches){
             if( (this.matches[i].date.mois == this.date.getMonth()+1))
             {
-              if((this.matches[i].date.jour == this.date.getDate())){
+              let a =(this.matches[i].date.jour == this.date.getDate()+1);
+              let b = (this.matches[i].date.jour == this.date.getDate()+2);
+              let c = (this.matches[i].date.jour == this.date.getDate()+3);
+              if( a||b||c ){
                 this.SortMatch=this.matches[i];
                 console.log(this.SortMatch)
                 return (this.SortMatch.versus[0]+" VS "+this.SortMatch.versus[1])
               }
             }
           }
-        },
+        }
     /*sharedata(){
                return (this.$router.push({name:"Pro",params:{data:this.academiciens}}));
             }*/
