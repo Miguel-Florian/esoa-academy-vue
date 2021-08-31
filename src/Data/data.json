@@ -404,21 +404,21 @@
         {
             "id": 2,
             "sender": "il@gmail.com",
-            "receiver": "vous@gmail.com",
+            "receiver": "moi@gmail.com",
             "objet": "Aucun Objet",
             "message": "Vous êtes convoqué au bureau du chef!"
         },
         {
             "id": 3,
-            "sender": "mail@gmail.com",
-            "receiver": "lui@gmail.com",
+            "sender": "vous@gmail.com",
+            "receiver": "moi@gmail.com",
             "objet": "Aucun Objet",
             "message": "Vous avez recu le bilan financier de ce mois !"
         },
         {
             "id": 4,
             "sender": "elle@gmail.com",
-            "receiver": "toi@gmail.com",
+            "receiver": "moi@gmail.com",
             "objet": "Aucun Objet",
             "message": "Voici le planning du mois en fichier pdf !!!"
         },
@@ -432,21 +432,21 @@
         {
             "id": 6,
             "sender": "il@gmail.com",
-            "receiver": "vous@gmail.com",
+            "receiver": "moi@gmail.com",
             "objet": "Aucun Objet",
             "message": "Vous êtes convoqué au bureau du chef!"
         },
         {
             "id": 7,
             "sender": "mail@gmail.com",
-            "receiver": "lui@gmail.com",
+            "receiver": "moi@gmail.com",
             "objet": "Aucun Objet",
             "message": "Vous avez recu le bilan financier de ce mois !"
         },
         {
             "id": 8,
             "sender": "elle@gmail.com",
-            "receiver": "toi@gmail.com",
+            "receiver": "moi@gmail.com",
             "objet": "Aucun Objet",
             "message": "Voici le planning du mois en fichier pdf !!!"
         }
