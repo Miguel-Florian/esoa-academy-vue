@@ -18,7 +18,7 @@
                                 <td>{{matche.versus[0]}}</td>
                                 <td>{{matche.versus[1]}}</td>
                                 <td>{{matche.date.jour}}/{{matche.date.mois}}/{{matche.date.annee}}</td>
-                                <td v-if="(matche.date.jour < date.getDate()) && (matche.date.mois <= date.getMonth()+1)"><span class="score">{{matche.score[0]}} - {{matche.score[1]}}</span></td>
+                                <td v-if="(matche.date.jour <= date.getDate()) && (matche.date.mois <= date.getMonth()+1)"><span class="score">{{matche.score[0]}} - {{matche.score[1]}}</span></td>
                                 <td v-else><span class="nogame">Pas encore joué</span></td>
                             </tr>   
                         </tbody>
