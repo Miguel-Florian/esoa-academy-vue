@@ -1,14 +1,14 @@
 /* eslint-disable vue/no-deprecated-filter */
 <template>
   <div class="card-container">
-    <div class="card">
+    <div class="card border-card-color">
       <div class="card-title">Académiciens</div>
       <div class="card-icon">
         <div class="card-nombre">{{ academiciens.length }}</div>
         <i class="las la-users la-3x"></i>
       </div>
     </div>
-    <div class="card scroll">
+    <div class="card scroll border-second-card-color">
       <div class="card-title">
         <span>{{ recrues.length }}</span> Nouvelle<span
           v-if="recrueTableTitles.length >= 2"
@@ -38,7 +38,7 @@
         </div>
       </div>
     </div>
-    <div class="card">
+    <div class="card border-third-card-color">
       <div class="card-title">Prochaine Rencontre</div>
       <div class="card-match">
         <div class="match-versus">
@@ -145,7 +145,8 @@ export default {
               let a =(this.matches[i].date.jour == this.date.getDate()+1);
               let b = (this.matches[i].date.jour == this.date.getDate()+2);
               let c = (this.matches[i].date.jour == this.date.getDate()+3);
-              if( a||b||c ){
+              let d = (this.matches[i].date.jour == this.date.getDate()+4);
+              if( a||b||c||d ){
                 this.SortMatch=this.matches[i];
                 console.log(this.SortMatch)
                 return (this.SortMatch.versus[0]+" VS "+this.SortMatch.versus[1])
@@ -197,6 +198,20 @@ export default {
   background-color: #fff;
   border-radius: 12px;
 }
+.border-card-color:hover,.border-second-card-color:hover,.border-third-card-color:hover{
+  box-shadow: 0 12px 24px 8px rgba(45, 67, 121, 0.192)!important;
+}
+/*.border-card-color:hover:hover{
+  box-shadow: 0 10px 20px 4px #ff39022f !important;
+  border-color: #ef5a31;
+  border:3px #ef5a31 double; 
+}
+.border-second-card-color:hover{
+  box-shadow: 0 10px 20px 4px #0066ff52 !important;
+}
+.border-third-card-color:hover{
+  box-shadow: 0 12px 24px 8px rgba(45,67,121,.1)!important;
+}*/
 /**Scroll */
 .card.scroll,
 .card-container.scroll {
