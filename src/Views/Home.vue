@@ -74,6 +74,11 @@ a{
 .logo{
   margin-top: 2em;
 }
+.logo img{
+    border-radius: 100%;
+    width: 10%;
+    height: 10%;
+  }
 .content-form{
   border: 0px solid black;
   padding: 2em;
@@ -150,7 +155,7 @@ button:hover{
   color: #FFFFFF;
 }
 /*----------Responsive for max-width: 320px, width 320px-375px ------------*/
-@media   screen and (max-width: 320px), (max-width:375px) and (min-width: 321px) {
+@media screen and (max-width: 320px), (max-width:375px) and (min-width: 321px) {
   nav{
     margin-top:2em;
   }
